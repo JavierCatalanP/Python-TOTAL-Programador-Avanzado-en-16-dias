@@ -47,4 +47,57 @@ Para parrafos
 con salto del lineas\n""") #Parrafos
 print("hola" + " " + 'J.C\n') #concatenando 3 cadenas
 print("me llamo  \"J.C\\n")#Comillas en cadena
-print("Esta es una linea\nY esta es otra") #Salto de linea
+print("Esta es una linea\nY esta es otra\n") #Salto de linea
+print("\tEsta es una linea con tabulación\n")#Esta linea equivale a tab
+print('This isn\'t a number\n')#Esta linea equivale a \ apostrofe
+print("This is a number: " + str(3))#Esta linea equivale a \ a
+print("\n")
+print('Este signo \\ es con barra invertida\n\n\n' )#Esta linea equivale a \ barra invertida
+
+"""Práctica String 1
+Crea un código que imprima en pantalla la siguiente expresión (pero usando print una sola vez):
+
+Línea 1
+Línea 2
+Línea 3
+Aclaración: presta mucha atención al texto que debes reproducir, ya que errores ortográficos y de puntuación, espacios en blanco adicionales y saltos de línea innecesarios pueden ocasionar errores inesperados que no son detectados por el módulo de evaluación, devolviendo un error en tu ejercicio.
+"""
+
+#Solución Practica  String 1
+print("Solución Practica  String 1\n")
+print("Línea 1\nLínea 2\nLínea 3\n")
+
+"""Práctica String 2
+Crea un código que imprima en pantalla la siguiente expresión.
+
+A	B	C
+D	E	F
+G	H	I
+Notas:
+
+- Observa que la distancia horizontal entre los números ha sido creada con UNA tabulación.
+
+- Puedes usar una o más declaraciones print
+
+Aclaración: presta mucha atención al texto que debes reproducir, ya que errores ortográficos y de puntuación, espacios en blanco adicionales y saltos de línea innecesarios pueden ocasionar errores inesperados que no son detectados por el módulo de evaluación, devolviendo un error en tu ejercicio.
+"""
+#Solución Practica  String 2
+print("Solución Practica  String 2\n")
+print("A\tB\tC\nD\tE\tF\nG\tH\tI\n")
+
+"""
+Práctica String 3
+Crea un código que imprima en pantalla la siguiente expresión:
+
+Barra Normal: /
+Barra Invertida: \
+Aclaración: presta mucha atención al texto que debes reproducir, ya que errores ortográficos y de puntuación, espacios en blanco adicionales y saltos de línea innecesarios pueden ocasionar errores inesperados que no son detectados por el módulo de evaluación, devolviendo un error en tu ejercicio.
+"""
+#Solución Practica  String 3
+print("Solución Practica  String 3\n")
+print("Barra" " ""Normal: /\nBarra" " ""Invertida: \\\n\n\n")
+
+#Input = petición o pedido
+#input( "¿Cual es tu nombre? ") #Petición
+#print("Hola " + input("¿Cual es tu nombre? ")) #Respuesta
+nombre = print("Hola tú eres " + (input("¿Cual es tu nombre? ")) + " " + (input("¿Cúal es tu apellido? ")))  #Respuesta
