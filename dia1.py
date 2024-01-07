@@ -149,3 +149,4 @@ crear un programa que solicite 2 nombre y cree el nombre de tu marca entre comil
 """
 print("Solución Practica Final\n")
 print("El nombre de tu cerveza\nes '" + input("Que ciudad te gustaria visitar?: ") + " " + input("Cual es tu color favorito?: ") + "'\nFelicitaciones!")
+
