@@ -107,3 +107,195 @@ print(mi_numero_2, (type(mi_numero_2)))
 print(mi_numero_3, (type(mi_numero_3)))
 print(mi_numero_4, (type(mi_numero_4)))
 print(mi_numero_5, (type(mi_numero_5)))
+
+#edad = input("Dime tu edad: ")
+#print("Tu edad es " + edad)
+#nueva_edad = int(edad) + 1
+#print("pronto vas a tener ",  nueva_edad)
+
+#Practica con intergers
+"""
+Práctica con Integers
+Declara una variable numérica llamada num_entero que contenga un valor de tipo integer de tu elección.
+
+Imprime el tipo de dato de dicha variable.
+"""
+print("Practica con Integers \n\n")
+#Solución Practica Integers
+print("Solución Practica Integers\n")
+num_entero = 33
+print((str(num_entero) + "\n"))
+
+"""Práctica con Floats
+Declara una variable numérica llamada num_decimal que contenga un valor de tipo float de tu elección.
+
+Imprime el tipo de dato de dicha variable.
+"""
+print("Practica con Floats \n\n")
+#Solución Practica Floats
+num_decimal = 33.3
+print(type(num_decimal))
+
+"""
+Práctica con Tipos de Datos Numéricos
+¿De qué tipo es el resultado de la suma de 7.5 + 2.5? Genera el código para verificarlo.
+
+Para ello, crea dos variables:
+
+num1 = 7.5
+
+num2 = 2.5
+
+A continuación, muestra en pantalla el tipo de dato que resulta de la suma de ambos números.
+
+Realiza el mismo ejercicio en PyCharm para ver el resultado. ¿Coindice con lo que esperabas?
+"""
+print("Practica con Tipos de Datos Numéricos \n\n")
+#Solución Practica Tipos de Datos Numéricos (Python automaticamente realiza la conversión de tipos de datos)
+num1 = 7
+num2 = 2.5
+total = num1 + num2
+print(type(total))
+
+#Conversiones implicitas
+
+num1 = num1 + num2
+total1 = int(num2)#Conveirte a entero
+print("Conversiones implicitas \n\n")
+print(type(num1))
+print(type(num2))
+print(type(total1))
+print(total1)
+
+#edad=input("Dime tu edad: ")
+print(type(edad))
+edad = int(edad) #conversión de string a entero
+print(type(edad))
+nueva_edad = 1 + edad
+print ("Tu nueva edad es :", str(nueva_edad))
+print(type(nueva_edad))
+
+#Práctica con conversiones 1
+"""
+Práctica con Conversiones 1
+Convierte el valor de num1 en un int e imprime el tipo de dato que resulta:"""
+print("Práctica con Conversiones 1 \n\n")
+#Solucion Practica Conversiones 1
+num1 = 7.5
+num1 = int(num1)
+print(type(num1))
+print("\n\n")
+
+"""
+Práctica con Conversiones 2
+Convierte el valor de num2 en un float e imprime el tipo de dato que resulta:
+"""
+
+print("Práctica con Conversiones 2 \n\n")
+#Solucion Practica Conversiones 2
+num2 = 10
+num2 = float(num2)
+print(type(num2))
+print("\n\n")
+"""
+Práctica con Conversiones 3
+Suma los valores de num1 y num2.
+
+No modifiques el valor de las variables ya declaradas, sino aplica las conversiones necesarias dentro de la función print().
+"""
+print("Práctica con Conversiones 3 \n\n")
+#Solucion Practica Conversiones 3
+num1 = "7.5"
+num2 = "10"
+
+print(float(num1) + int(num2))
+print("\n\n")
+
+#Formatear Cadenaa
+"""
+1- Función format
+print("Mi auto es {} y de matrícula {} ".format(color_auto,matricula))
+2- cadenas literales
+print(f "Mi auto es (color_autol y de matrícula (matricula"),
+"""
+
+x = 10
+y = 5
+print("Mis numeros son " + str(x) + str(y)) #I[mpresiones con conversiones
+print("Mis numeros son {} y {}".format(x,y)) #Impresiones con format
+print("La suma de {} y {} es {}".format(x,y,x+y)) #Impresiones con format
+color="rojo"
+matricula = 541926
+print (f"El auto es {color} y su matricula es {matricula}") #Impresiones con format
+
+"""
+Práctica Formatear Cadenas 1
+Necesitamos imprimir el nombre y número de asociado dentro de la siguiente frase:
+
+Estimado/a (nombre_asociado), su número de asociado es: (numero_asociado)
+
+Recuerda que la precisión de tu respuesta (espacios, ortografía y puntuación), es muy importante para llegar al resultado correcto.
+"""
+#Solucion Practica Formatear Cadenas 1
+print("Práctica Formatear Cadenas 1 \n\n")
+nombre_asociado = "Jesse Pinkman"
+numero_asociado1 = 399058
+
+print(f"Estimado/a {nombre_asociado}, su número de asociado es: {numero_asociado1}\n\n")
+
+"""
+
+Práctica Formatear Cadenas 2
+Muestra al usuario la cantidad de puntos acumulados dentro de la siguiente frase:
+
+Has ganado (puntos_nuevos) puntos! En total, acumulas (puntos_totales) puntos
+
+Recuerda que la precisión de tu respuesta (espacios, ortografía y puntuación), es muy importante para llegar al resultado correcto.
+"""
+#Solucion Practica Formatear Cadenas 2
+print("Práctica Formatear Cadenas 2 \n")
+puntos_nuevos = 350
+puntos_totales = 1225
+print(f"Has ganado {puntos_nuevos} puntos! En total, acumulas {puntos_totales} puntos\n\n")
+
+"""
+
+Práctica Formatear Cadenas 3
+Muestra al usuario la cantidad de puntos acumulados dentro de la siguiente frase:
+
+Has ganado (puntos_nuevos) puntos! En total, acumulas (puntos_totales) puntos
+
+En esta ocasión, la cantidad de puntos acumulados (totales) será igual a los puntos_anteriores más los puntos_nuevos.
+
+Recuerda que la precisión de tu respuesta (espacios, ortografía y puntuación), es muy importante para llegar al resultado correcto.
+"""
+#Solucion Practica Formatear Cadenas 3
+print("Práctica Formatear Cadenas 3 \n")
+puntos_anteriores = 875
+puntos_nuevos = 350
+puntos_totales = puntos_anteriores + puntos_nuevos
+print(f"Has ganado {puntos_nuevos} puntos! En total, acumulas {puntos_totales} puntos\n\n")
+
+#Operadores matemáticos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
