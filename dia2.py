@@ -277,20 +277,62 @@ puntos_totales = puntos_anteriores + puntos_nuevos
 print(f"Has ganado {puntos_nuevos} puntos! En total, acumulas {puntos_totales} puntos\n\n")
 
 #Operadores matemáticos
+x = 16
+y = 2
+z = 2
 
+print(f"{x} mas {y} es igual a {x+y}")#Suma
+print(f"{x} menos {y} es igual a {x-y}")#Resta
+print(f"{x} por {y} es igual a {x*y}")# multiplicación
+print(f"{x} dividido {y} es igual a {x/y}") #División
+print(f"{x} elevado a {y} es igual a {x**y}") #Potencia
+print(f"{x} elevado a {3} es igual a {x**3}") #Potencia x 3
+print(f"{x} modulo {y} es igual a {x%y}") #Modulo significa el residuo de una división
+print(f"{z} dividido al piso de {y} es igual a {z//y}") #División al piso significa que solo se muestra el entero de la división
+print(f"La raíz cuadrada de {x} es igual a {x**0.5}") #Raíz cuadrada
+print(f"El 20% de {x} es igual a {x*0.2}%") #20% de x
 
+print("\n\n")
+"""
+Práctica Operadores Matemáticos 1
+Muestra en pantalla el cociente (división al piso) de los siguientes dos números: 874 dividido entre 27.
 
+Debes mostrar solo el valor numérico que resulta de esta operación.
+"""
+#Solucion Practica Operadores Matemáticos 1
+print("Práctica Operadores Matemáticos 1 \n")   
+x = 874
+y = 27
+print(f"{x//y}")
 
+"""
+Práctica Operadores Matemáticos 2
+Muestra en pantalla el módulo (es decir, el resto) de la división entre 456 y 33.
 
+Debes mostrar solo el valor numérico que resulta de esta operación.
+"""
+print("\n\n")
+#Solucion Practica Operadores Matemáticos 2
+print("Práctica Operadores Matemáticos 2 \n")
+x = 456
+y = 33
+print(f"{x%y}")
+print("\n\n")
+"""
+Práctica Operadores Matemáticos 3
+Calcula y muestra en pantalla la raíz cuadrada de 783.
 
+Debes mostrar solo el valor numérico que resulta de esta operación.
+"""
+#Solucion Practica Operadores Matemáticos 3
+print("Solucion Practica Operadores Matemáticos 3 \n")
+x = 783
+print(f"{x**0.5}")
+print("\n\n")
 
-
-
-
-
-
-
-
+#Redondeo
+print(f"El número {x} redondeado a 2 decimales es {round(x,2)}")#Redondeo a 2 decimales
+print(f"El número {x} trunca a 2 decimales es {round(x,2)}")#Trunca a 2 decimales
 
 
 
