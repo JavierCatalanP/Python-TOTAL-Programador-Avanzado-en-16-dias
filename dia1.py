@@ -101,3 +101,51 @@ print("Barra" " ""Normal: /\nBarra" " ""Invertida: \\\n\n\n")
 #input( "¿Cual es tu nombre? ") #Petición
 #print("Hola " + input("¿Cual es tu nombre? ")) #Respuesta
 nombre = print("Hola tú eres " + (input("¿Cual es tu nombre? ")) + " " + (input("¿Cúal es tu apellido? ")))  #Respuesta
+
+"""Práctica Input 1
+Crea un código que le permita ingresar una respuesta al usuario, haciéndole la siguiente pregunta:
+
+¿Qué estás estudiando?
+
+El código debe poder imprimir en pantalla lo ingresado por el usuario (utilizando print).
+
+Aclaración: no deben imprimirse strings adicionales a la respuesta del usuario.
+"""
+#Solución Practica  Input 1
+print("Solución Practica  Input 1\n")
+print(input("¿Qué estás estudiando?"))
+print("\n\n")
+
+"""Práctica Input 2
+Crea un código que le permita ingresar una respuesta al usuario, haciéndole la siguiente pregunta:
+
+¿En qué país vives?
+
+El código debe poder imprimir en pantalla lo ingresado por el usuario (utilizando print).
+
+Aclaración: no deben imprimirse strings adicionales a la respuesta del usuario."""
+
+#Solución Practica  Input 2
+print("Solución Practica  Input 2\n")
+print(input("¿En qué país vives?"))
+print("\n\n")
+
+"""
+Práctica Input 3
+Crea un código que muestre en pantalla el nombre completo del usuario, permitiéndole ingresar su nombre y apellido con las siguientes instrucciones:
+
+Escribe tu nombre:
+Escribe tu apellido:
+El código debe poder imprimir en pantalla el nombre y apellido del usuario, separados por un espacio."""
+
+#Solución Practica  Input 3
+print("Solución Practica  Input 3\n")
+print("" + (input("Escribe tu nombre: ")) + " " + (input("Escribe tu apellido: ")))
+print("\n\n")
+
+"""Practica Final,
+crear un programa que solicite 2 nombre y cree el nombre de tu marca entre comillas.
+
+"""
+print("Solución Practica Final\n")
+print("El nombre de tu cerveza\nes '" + input("Que ciudad te gustaria visitar?: ") + " " + input("Cual es tu color favorito?: ") + "'\nFelicitaciones!")
