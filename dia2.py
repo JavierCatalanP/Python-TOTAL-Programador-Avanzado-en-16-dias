@@ -26,15 +26,15 @@ edad = 37
 print(nombre1, edad)
 #Ejemplo 2
 print("Ejemplo 2 \n")
-nombre2 = input("Dime tu nombre: ")
-print("Tu nombre es: " + nombre2)
+#nombre2 = input("Dime tu nombre: ")
+#print("Tu nombre es: " + nombre2)
 #Ejemplo 3 concatenar variales
-frase = "Mi nombre es " + nombre2 + " y mi edad es " + str(edad)
-print((frase)+"\n")
+#frase = "Mi nombre es " + nombre2 + " y mi edad es " + str(edad)
+#print((frase)+"\n")
 #Ejemplo 4
-num1 = int(input("Dime un número: "))
-num2 = int(input("Dime otro número: "))
-print("La suma de los números es: " + str(num1 + num2))
+#num1 = int(input("Dime un número: "))
+#num2 = int(input("Dime otro número: "))
+#print("La suma de los números es: " + #str(num1 + num2))
 """
 Práctica con Variables 1
 Declara dos variables, llamadas nombre y edad.
@@ -96,3 +96,14 @@ mes_8c = "Agosto"
 
 #Intergers y Floats
 print("Intergers y Floats \n\n")
+
+mi_numero_1 = 1
+mi_numero_2 = 2.6
+mi_numero_3 = True
+mi_numero_4 = 2,6
+mi_numero_5 = "'2,6'"
+print(mi_numero_1, (type(mi_numero_1)))
+print(mi_numero_2, (type(mi_numero_2)))
+print(mi_numero_3, (type(mi_numero_3)))
+print(mi_numero_4, (type(mi_numero_4)))
+print(mi_numero_5, (type(mi_numero_5)))
