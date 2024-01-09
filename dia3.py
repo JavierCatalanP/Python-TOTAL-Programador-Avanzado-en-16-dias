@@ -324,33 +324,127 @@ print(consulta  +" Tiene "  + str(cliente['edad'])+ " y su saldo es:  " + str(cl
 print("\n")
 
 dic = {'clave1':123, 'clave2':[1,2,3], 'clave3':{'clave31':100, 'clave32':200, 'clave33':cliente}}
+print(dic['clave3']['clave31'])#busca el valor de la clave3 y luego la clave31
+
+dic = {'c1':['a', 'b','c'], 'c2':['d', 'e', 'f'], 'c3':['g', 'h', 'i']}
+       
+print(dic['c2'][1].upper())#busca el valor de la clave2 y luego el elemento 1 y lo pone en mayuscula
+
+print("\n")
+
+#Agregar elementos a un diccionario
+dic = {'c1':['a', 'b','c'], 'c2':['d', 'e']}
+print(dic)
+dic['c3'] = ['g', 'h', 'i']#agrega un elemento al diccion
+print(dic)
+dic[2] = 'hola'#agrega un elemento al diccion
+print(dic)
+dic[2]= '8' #Reemplaza el valor de la clave 2
 print(dic)
 
+print("\n")
 
+#Eliminar elementos de un diccionario
+dic = {'c1':['a', 'b','c'], 'c2':['d', 'e']}
+print(dic)
+del dic['c2']#elimina el elemento c2
+print(dic)
 
+print("\n")
 
+print(dic.keys())#muestra las claves
+print(dic.values())#muestra los valores
+print(dic.items)#muestra los elementos
 
+#Práctica Diccionarios 1
+print("PRACTICA DICCIONARIOS 1")
+print("\n")
+"""
+Práctica Diccionarios 1
 
+Práctica Diccionarios 1
+Crea un diccionario llamado mi_dic que almacene la siguiente información de una persona:
 
+nombre: Karen
 
+apellido: Jurgens
 
+edad: 35
 
+ocupacion: Periodista
 
+Los nombres de las claves y valores deben ser iguales a la consigna."""
 
+#solución practica 1 diccionario
+mi_dic = {
+ "nombre": "Karen",
+ "apellido": "Jurgens",
+ "edad": 35,
+ "ocupacion": "Periodista"   
+}
+print("\n")
+#Práctica Diccionarios 2
+print("PRACTICA DICCIONARIOS 2")
+print("\n")
+"""
+Práctica Diccionarios 2
+Crea una función print que devuelva del segundo item de la lista llamada points2, dentro del siguiente diccionario.
 
+Si el valor 300 cambiara en el futuro, el código debería funcionar igual para devolver el valor que se encuentre en esa misma posición. Para ello, deberás hacer referencia a los nombres de las claves y/o índices según corresponda."""
 
+def print_second_point(d):
+    return d["puntos"]["points2"][1]
 
+mi_dict = {"valores_1":{"v1":3,"v2":6},"puntos":{"points1":9,"points2":[10,300,15]}}
 
+print(print_second_point(mi_dict))
+print("\n")
 
+#Práctica Diccionarios 3
+print("PRACTICA DICCIONARIOS 3")
+print("\n")
+"""
+Práctica Diccionarios 3
+Actualiza la información de nuestro diccionario llamado mi_dic  (reasignando nuevos valores a las claves según corresponda), y agrega una nueva clave llamada "pais" (sin tilde). Los nuevos datos son:
 
+nombre: Karen
 
+apellido: Jurgens
 
+edad: 36
 
+ocupacion: Editora
 
+pais: Colombia
 
+para ello, no debes cambiar la línea de código ya escrita, sino actualizar los valores mediante métodos de diccionarios.
 
+"""
+mi_dic = {"nombre":"Karen", "apellido":"Jurgens", "edad":35, "ocupacion":"Periodista"}
 
+# Actualizando los valores existentes y agregando una nueva clave
+mi_dic["edad"] = 36
+mi_dic["ocupacion"] = "Editora"
+mi_dic["pais"] = "Colombia"
 
+# Imprimiendo el diccionario actualizado
+print(mi_dic)
+print("\n")
 
+#Tuples
+"""
+- son inmutables, es decir, no se pueden modificar una vez creados.
+- ocupan menos memoria que las listas.
+- a prueba de hacer una lista de millones de elementos, una tupla puede ser más rápida
+- a pruebas de dañar una tupla, una tupla puede ser más rápida
+- son inmutables como los String, no se pueden modificar
+"""
+mi_tuple = (1,2,3,4,5, (9,2,3,4,5))
+print(mi_tuple)
+print(type(mi_tuple))
 
-
+#Tuples pueden tener distintos valores y tipos de datos
+mi_tuple = ("hola", 1, True, [1,2,3], (9,2,3,4,5), "jc")
+print(mi_tuple[0])#muestra el elemento 0 de la tupla
+print(mi_tuple[-2])#muestra el elemento -2 de la tupla
+print(mi_tuple[4:0])#muestra el elemento 1 al 4 de la tupla
