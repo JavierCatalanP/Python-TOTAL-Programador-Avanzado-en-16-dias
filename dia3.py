@@ -584,7 +584,7 @@ print("PRACTICA SETS 2")
 Práctica Sets 2
 Elimina un elemento al azar del siguiente set, utilizando métodos de sets.
 
-sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}""""
+sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}"""
 
 sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}
 eliminado = sorteo.pop()
@@ -611,3 +611,160 @@ sorteo.add("Damián")
 print(sorteo)
 print("\n")
 
+#Booleanos
+"""
+- Solo tienen 2 valores: True y False
+- Se pueden crear de manera indirecta con operadores
+- Se pueden comparar con operadores
+- Se pueden convertir a enteros
+- Los operadores son: ==, !=, <, >, <=, >=
+- Los operadores lógicos son: and, or, not
+- Los operadores de identidad son: is, is not
+- Los operadores de pertenencia son: in, not in
+- Los operadores de asignación son: =, +=, -=, *=, /=, %=,
+- Los operadores de comparación son: ==, !=, <, >, <=, >=
+- booleanos son la base de la IA
+"""
+var1 = True
+var2 = False
+
+numero1 = 5 > 2+3 #5 es mayor que 2+3
+numero2 = 5 == 2+3 #5 es igual a 2+3
+numero3 = 5 != 2+3 #5 es diferente a 2+3
+numero = bool(5>6) #bool convierte un valor a booleano
+
+print(var1)
+
+print(numero1)
+print(numero2)
+print(numero3)
+print(numero)
+
+
+lista = [1,2,3,4,5]
+control = 5 in lista #verifica si el valor 5 esta en la lista
+print(type(control)) 
+print(control)
+
+print("\n")
+#Práctica Booleanos 1)
+print("PRACTICA BOOLEANOS 1")
+"""
+Práctica Booleanos 1
+Realiza una comparación que arroje como resultado un booleano y almacena el resultado (True/False) en una variable llamada prueba
+"""
+#solucion
+prueba = 5 < 4
+
+print(prueba)
+print("\n")
+
+#Práctica Booleanos 2)
+print("PRACTICA BOOLEANOS 2")
+"""
+Práctica Booleanos 2
+Verifica si 17834/34 es mayor que 87*56 y muestra el resultado (booleano) en pantalla utilizando print()
+"""
+#solucion
+resultado = 17834/34 > 87*56
+
+print(resultado)
+
+print("\n")
+#Práctica Booleanos 3)
+
+print("PRACTICA BOOLEANOS 3")
+"""
+Práctica Booleanos 3
+Verifica si la raíz cuadrada de 25 es igual a 5 y muestra el resultado (booleano) en pantalla utilizando print()
+"""
+#solucion
+resultado = (5**2 == 25)
+print(resultado)
+print("\n")
+
+#Proyecto día 3
+print(f"Proyecto día 3")
+"""
+Proyecto del Día 3
+Bueno, el tercer día no ha dejado nada que desear. Hemos visto muchas cosas y de las buenas,
+y ha llegado la hora de juntar todo lo aprendido y ponerlo en práctica, creando un programa
+perfectamente funcional desde cero.
+Ahora que ya sabes usar los métodos y las propiedades de los strings, que sabes indexar
+conjuntos de datos como los strings, las listas y los tuples, y sobre todo ahora que conoces
+todos los tipos de datos que necesitas para poder almacenar lo que sea, vas a poder encontrar
+una forma de programar un analizador de texto.
+La consigna es la siguiente: vas a crear un programa que primero le pida al usuario que
+ingrese un texto. Puede ser un texto cualquiera: un artículo entero, un párrafo, una frase, un
+poema, lo que quiera. Luego, el programa le va a pedir al usuario que también ingrese tres
+letras a su elección y a partir de ese momento nuestro código va a procesar esa información
+para hacer cinco tipos de análisis y devolverle al usuario la siguiente información:
+1. Primero: ¿cuántas veces aparece cada una de las letras que eligió? Para lograr esto, te
+recomiendo almacenar esas letras en una lista y luego usar algún método propio de string
+que nos permita contar cuantas veces aparece un sub string dentro del string. Algo que
+debes tener en cuenta es que al buscar las letras pueden haber mayúsculas y minúsculas
+y esto va a afectar el resultado. Lo que deberías hacer para asegurarte de que se
+encuentren absolutamente todas las letras es pasar, tanto el texto original como las
+letras a buscar, a minúsculas.
+2. Segundo: le vas a decir al usuario cuántas palabras hay a lo largo de todo el texto. Y
+para lograr esta parte, recuerda que hay un método de string que permite transformarlo
+en una lista y que luego hay una función que permite averiguar el largo de una lista.
+3. Tercero: nos va a informar cuál es la primera letra del texto y cuál es la última. Aquí
+claramente echaremos mano de la indexación.
+4. Cuarto: el sistema nos va a mostrar cómo quedaría el texto si invirtiéramos el orden de
+las palabras. ¿Acaso hay algún método que permita invertir el orden de una lista, y otro
+que permita unir esos elementos con espacios intermedios? Piénsalo.
+5. Y por último: el sistema nos va a decir si la palabra “Python” se encuentra dentro del
+texto. Esta parte puede ser algo complicada de imaginársela, pero te voy a dar una pista:
+puedes usar booleanos para hacer tu averiguación y un diccionario para encontrar la
+manera de expresarle al usuario tu respuesta. 
+"""
+
+
+#Solución
+texto = input("Ingresa un texto a elección: ")
+letras = [] #lista vacia
+
+texto = texto.lower()#pasa todo a minusculas
+
+letras.append(input("Ingresa la primera letra: ".lower()))#pasa todo a minusculas
+letras.append(input("Ingresa la segunda letra: ".lower()))#pasa todo a minusculas
+letras.append(input("Ingresa la tercera letra: ".lower()))#pasa todo a minusculas
+
+print("\n")
+print("CANTIDAD DE LETRAS")#
+cantidad_letras1 = texto.count(letras[0])#cuenta cuantas veces aparece la letra en el texto
+cantidad_letras2 = texto.count(letras[1])#cuenta cuantas veces aparece la letra en el texto
+cantidad_letras3 = texto.count(letras[2])#cuenta cuantas veces aparece la letra en el texto
+
+print(f"Hemos encontrado la letra '{letras[0]}' repetida {cantidad_letras1} veces")#imprime la letra y la cantidad de veces que se repite
+print(f"Hemos encontrado la letra '{letras[1]}' repetida {cantidad_letras2} veces")#imprime la letra y la cantidad de veces que se repite
+print(f"Hemos encontrado la letra '{letras[2]}' repetida {cantidad_letras3} veces")#imprime la letra y la cantidad de veces que se repite
+
+print("\n")
+print("CANTIDAD DE PALABRAS")
+palabras = texto.split()#saca las palabras del texto
+print(f"Hemos encontrado {len(palabras)} palabras en tu texto")#imprime la cantidad de palabras
+
+print("\n")
+print("LETRAS DE INICIO Y DE FIN")
+letra_inicio = texto[0]#saca la primera letra del texto
+letra_final = texto[-1]#saca la ultima letra del texto
+print(f"La letra inicial es '{letra_inicio}' y la letra final es '{letra_final}'")#imprime la letra inicial y la final
+
+print("\n")
+print("TEXTO INVERTIDO")
+palabras.reverse()#invierte el orden de las palabras
+texto_invertido = ' '.join(palabras)#une las palabras con espacios
+print(f"Si ordenamos tu texto al revés va a decir: '{texto_invertido}'")#
+
+print("\n")
+print("BUSCANDO LA PALABRA PYTHON")
+buscar_python ='python' in texto
+dic = {True:"sí", False:"no"}#crea un diccionario
+print(f"La palabra 'Python' {dic[buscar_python]} se encuentra en el texto")#imprime si la palabra python se encuentra en el texto
+#Dia 3 terminado.
+
+"""Resumen:
+En este día hemos aprendido a trabajar con los strings, los booleanos, los list
+"""
