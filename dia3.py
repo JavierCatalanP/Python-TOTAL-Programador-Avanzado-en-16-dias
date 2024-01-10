@@ -448,3 +448,166 @@ mi_tuple = ("hola", 1, True, [1,2,3], (9,2,3,4,5), "jc")
 print(mi_tuple[0])#muestra el elemento 0 de la tupla
 print(mi_tuple[-2])#muestra el elemento -2 de la tupla
 print(mi_tuple[4:0])#muestra el elemento 1 al 4 de la tupla
+
+#casting
+mi_tuple = list(mi_tuple)#convierte la tupla en una lista
+print(type(mi_tuple))
+print("\n")
+
+t = (1, 2, 3)
+x, y, z = t#asigna a cada variable el valor de la tupla
+print(x, y, z) #imprime 1 2 3 (Debe contener la misma cantidad de variables que elementos en la tupla)
+print(len(t))#muestra la cantidad de elementos de la tupla
+print(t.count(1))#muestra la cantidad de veces que se repite el valor 1 en la tup 
+print(t.index(2))#muestra la posicion del valor 2 en la tupla
+
+
+print("\n")
+#Práctica Tuples 1)
+print("PRACTICA TUPLES 1")
+"""
+Práctica Tuples 1
+Utiliza un método de tuplas para contar la cantidad de veces que aparece el valor 2 en la siguiente tupla, y muestra el resultado (integer) en pantalla:
+
+mi_tupla = (1, 2, 3, 2, 3, 1, 3, 2, 3, 3, 3, 1, 3, 2, 2, 1, 3, 2)"""
+mi_tupla = (1, 2, 3, 2, 3, 1, 3, 2, 3, 3, 3, 1, 3, 2, 2, 1, 3, 2)
+
+cantiadad_de_2 = mi_tupla.count(2)
+print(cantiadad_de_2)
+print("\n")
+print("\n")
+
+#Práctica Tuples 2)
+print("PRACTICA TUPLES 2")
+"""
+Práctica Tuples 2
+Convierte a lista la siguiente tupla, y almacénala en una variable llamada mi_lista.
+
+mi_tupla = (1, 2, 3, 2, 3, 1, 3, 2)"""
+
+print("\n")
+
+mi_tupla = (1, 2, 3, 2, 3, 1, 3, 2)
+mi_lista = list(mi_tupla)
+print(mi_lista)
+
+print("\n")
+
+
+#Práctica Tuples 3)
+print("PRACTICA TUPLES 3")
+
+"""
+Práctica Tuples 3
+Extrae los elementos de la siguiente tupla en cuatro variables: a, b, c, d
+
+mi_tupla = (1, 2, 3, 4)"""
+
+mi_tupla = (1, 2, 3, 4)
+
+a, b, c, d = mi_tupla
+
+print(a)
+print(b)
+print(c)
+print(d)
+
+print("\n")
+
+#Sets
+"""
+Caracteristicas:
+- Se pueden modificar
+- No tienen un orden
+- No permite duplicados
+- No permite subindices
+- Se pueden crear con {} o con la función set()
+- no poner lisas dentro de los sets
+- si admiten valores booleanos
+- si acetan valores repetidos
+- se pueden hacer operaciones entre sets
+- no se pueden hacer operaciones entre sets y listas
+- los dicc no se pueden hacer sets
+- los seets se pueden uniir con el operador |
+"""
+
+mi_set1 = set((1,2,3,4,5))#crea un set a partir de una lista
+print(type(mi_set1))
+print(mi_set1)
+
+mi_set = {1,2,3,4,5,6}#se crea un set con {}
+print(type(mi_set))
+print(mi_set)
+
+print(len(mi_set))#muestra la cantidad de elementos del set
+print(3 in mi_set)#muestra si el valor 3 esta en el set 
+
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+s3 = s1.union(s2) #une los sets
+
+print(s3)
+
+#metodos
+s3.add(1235) #agrega un elemento al set
+s3.remove(3) #elimina un elemento del set
+s3.discard(2) #elimina un elemento del set
+sorteo = s3.pop() #elimina un elemento del set
+print(sorteo)#muestra el elemento eliminado
+s3.clear() #limpia el set
+print(s3)
+print("\n")
+
+#Práctica Sets 1)
+print("PRACTICA SETS 1")
+"""
+
+Práctica Sets 1
+Une los siguientes sets en uno solo, llamado mi_set_3:
+
+{1, 2, "tres", "cuatro"}
+
+{"tres", 4, 5}
+"""
+mi_set_1 = {1, 2, "tres", "cuatro"}
+mi_set_2 = {"tres", 4, 5} 
+
+mi_set_3 = mi_set_1.union(mi_set_2)
+print(mi_set_3)
+
+print("\n")
+
+#Práctica Sets 2)
+print("PRACTICA SETS 2")
+"""
+
+Práctica Sets 2
+Elimina un elemento al azar del siguiente set, utilizando métodos de sets.
+
+sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}""""
+
+sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}
+eliminado = sorteo.pop()
+
+print(eliminado)
+print(sorteo)
+
+print("\n")
+
+#Práctica Sets 3)
+print("PRACTICA SETS 3")
+"""
+
+Práctica Sets 3
+Agrega el nombre Damián al siguiente set, utilizando métodos de sets:
+
+sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}
+"""
+
+sorteo = {"Camila", "Margarita", "Axel", "Jorge", "Miguel", "Mónica"}
+
+sorteo.add("Damián")
+
+print(sorteo)
+print("\n")
+
