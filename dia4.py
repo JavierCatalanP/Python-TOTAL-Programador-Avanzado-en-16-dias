@@ -214,3 +214,32 @@ palabra2 = "tecnología"
 mi_bool = not(palabra1 == frase) and not(palabra2 == frase)
 print(mi_bool)
 print("\n")
+
+#Control de Fujos
+"""
+Controlar el flujo con 3 palabras claves, estas son:
+- if (si se cumple una condición).
+if una_condicion:
+    print(“se cumple la condición”) #Ejecuta el código si se cumple la condición. Si no cuenta con la condición, no se ejecuta el código.
+
+- elif (si no se cumple la condición anterior, pero se cumple otra).
+elif otra_condicion:
+    print(“se cumple la condición”) #Ejecuta el código si se cumple. Si no se cumple la condición, no se ejecuta el código.
+
+- else (si no se cumple ninguna de las condiciones anteriores).
+else:
+    print(“no se cumple ninguna condición”) #Ejecuta el código si no se cumple ninguna de las condiciones anteriores.
+
+Ejemplo general:
+
+if una_condicion:
+    print(codigo_a)
+elif otra_condicion:
+    print(codigo_c)
+elif otra_condicion:
+print(codigo_d)
+else:
+    print(codigo_b)    
+#python lee desde arriba hacia abajo, por lo que si no se cumple la condición anterior
+"""
+
