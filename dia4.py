@@ -293,8 +293,8 @@ Crea una estructura de control de flujo que compare los valores de las variables
 Debes mostrar en pantalla el valor de las variables ingresadas en lugar de num1 y num2.
 """
 
-num1 = int(input("Ingresa un número:"))
-num2 = int(input("Ingresa otro número:"))
+#num1 = int(input("Ingresa un número:"))
+#num2 = int(input("Ingresa otro número:"))
 
 if num1 > num2:
     print(f"{num1} es mayor que {num2}")
@@ -447,24 +447,120 @@ nueva_secuencia = sorted(secuencia)
 
 
 """
+#Loop = Rpiten  un blo que de coincide con una condicion (For y While)
+
+#For = se utiliza para repetir un bloque de código un número determinado de veces.
+#Wile = mientras = se utiliza para repetir un bloque de código mientras se cumpla
+print("\n")
+
+print("Ejemplo 1")
+nombres = ["Juan", "María", "Pedro", "Ana"]
+#por cada elemento en nombres, imprime "Hola"
+
+for elemento in nombres:
+    print("Hola" + elemento)
+
+print("\n")
+
+print("Ejemplo 2")
+lista = [1, 2, 3, 4, 5]
+
+for numero in lista: #Por -> variable del blueque -> in = lugar -> lista = elemento 
+    print(numero)
+    print("Número: ", numero) #Imprime el numero de la lista
+    print(f"Número: {numero}") #imprime el numero y la variable
+
+print("\n")
+
+print("Ejemplo 3")
+
+lista = ['a','b', 'c', 'd', 'e']
+
+for letra in lista:
+    numero_letra = lista.index(letra) + 1
+    print(f"La letra {numero_letra} es:  {letra}")
+print("\n")
+
+print("Ejemplo 4")
+lista = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
+
+for nombre in lista:
+    if nombre.startswith('C'): #debe imprimir nombre que inicie con C
+        print(nombre)
+    
+print("\n")
+
+print("Ejemplo 5")
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+mi_valor = 0
+
+for numero in numeros:
+    mi_valor = mi_valor + numero
+    print("Voy a imprimir lo que esta dentro del for: ", mi_valor)
+print(f"El valor final de mi_valor es: {mi_valor}")
+
+
+
+print("\n")
+
+palabra = 'python'
+
+for letra in palabra:
+    print(letra)
+
+print("\n")
+
+dic ={'clave1':'1', 'clave2':'2', 'clave3':'3'}
+
+for item in dic.items():
+    print(item)
+for item in dic.values():
+    print(item)
+
+print("\n")
+
 
 #Práctica Loop For 1
+"""Práctica Loop For 1
+Utilizando loops For, saluda a todos los miembros de una clase, imprimiendo "Hola" + su nombre.
+
+Por ejemplo: "Hola María"
+
+alumnos_clase = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
+"""
+print("\n")
 
 alumnos_clase = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
 
+print("\n")
 for alumno in alumnos_clase:
     print(f"Hola {alumno}")
 
 #Práctica Loop For 2
+"""Práctica Loop For 2
+Dada la siguiente lista de números, realiza la suma de todos los números utilizando loops For y almacena el resultado de la suma en una variable llamada suma_numeros:
+lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]"""
+print("\n")
 
 lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
-
 suma_numeros = 0
 
 for numero in lista_numeros:
     suma_numeros = suma_numeros + numero
+print(suma_numeros)
 
+print("\n")
 #Práctica Loop For 3
+"""Práctica Loop For 3
+Dada la siguiente lista de números, realiza la suma de todos los números pares e impares* por separado en las variables suma_pares y suma_impares respectivamente:
+
+lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+
+*Recordando de los días anteriores: el módulo (o resto) de un número dividido 2 es cero cuando dicho valor es par, y 1 cuando es impar
+
+num % 2 == 0 (valores pares)
+
+num % 2 == 1 (valores impares)"""
 
 lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
 
@@ -477,6 +573,11 @@ for numero in lista_numeros:
         suma_pares = suma_pares + numero
     else:
         suma_impares = suma_impares + numero
+print(f"La suma de los pares es: {suma_pares}")
+print(f"La suma de los impares es: {suma_impares}")
+
+print("\n")
+
 
 #Práctica Loop While 1
 
@@ -620,5 +721,4 @@ valores_pares = [valor for valor in valores if valor%2 == 0]
 temperatura_fahrenheit = [32, 212, 275]
 
 grados_celsius = [(temperatura-32)*(5/9) for temperatura in temperatura_fahrenheit]
-
 
