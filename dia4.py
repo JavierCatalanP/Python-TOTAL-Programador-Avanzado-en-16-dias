@@ -152,7 +152,6 @@ print(mi_bool)
 print("\n")
 
 #Práctica Operadores Lógicos 1
-
 """
 Crea tres variables (num1 ,  num2 y num3):
 
@@ -168,7 +167,7 @@ Verifica si num1 es mayor que num2, y menor que num3. Almacena el resultado de d
 num1 = 36
 num2 = 72 / 2
 num3 = 48
-mi_bool = ((num1 > num2) and num3 )
+mi_bool = ((num1 > num2) and num3)
 print(mi_bool)
 print("\n")
 #Práctica Operadores Lógicos 2
@@ -190,7 +189,7 @@ num2 = 72 / 2
 num3 = 48
 mi_bool = (num1 > num2 or num2 < num3)
 print(mi_bool)
-print("\n") 
+print("\n")
 
 #practica Operadores Lógicos 3
 """
@@ -211,7 +210,7 @@ frase = "Cuando algo es lo suficientemente importante, lo haces incluso si las p
 palabra1 = "éxito"
 palabra2 = "tecnología"
 
-mi_bool = not(palabra1 == frase) and not(palabra2 == frase)
+mi_bool = not (palabra1 == frase) and not (palabra2 == frase)
 print(mi_bool)
 print("\n")
 
@@ -244,7 +243,7 @@ else:
 """
 #Práctica Control de Fujo 1
 
-if 5  == 9:
+if 5 == 9:
     print("Es correcto, 10 es mayor que 9")
 else:
     print("No es correcto, 10 no es mayor que 9")
@@ -258,8 +257,6 @@ elif mascota == 'pez':
     print('Tienes un pez')
 else:
     print('No tienes mascota')
-
-
 
 edad = 16
 calificacion = 9
@@ -302,7 +299,6 @@ elif num2 > num1:
     print(f"{num2} es mayor que {num1}")
 else:
     print(f"{num1} y {num2} son iguales")
-
 """""
 # Pedir input al usuario para num1 y num2
 num1 = int(input("Ingresa el valor para num1: "))
@@ -341,13 +337,14 @@ tiene_licencia = False
 if edad >= 18 and tiene_licencia:
     print("Puedes conducir")
 elif edad < 18:
-    print("No puedes conducir aún. Debes tener 18 años y contar con una licencia")
+    print(
+        "No puedes conducir aún. Debes tener 18 años y contar con una licencia"
+    )
 else:
     print("No puedes conducir. Necesitas contar con una licencia")
 
 print("\n")
 #Práctica Control de Fujo 3
-
 """
 Práctica Control de Flujo 3
 Para acceder a un determinado puesto de trabajo, el candidato debe ser capaz de programar en Python y tener conocimientos de inglés.
@@ -373,7 +370,9 @@ sabe_python = False
 if habla_ingles and sabe_python:
     print("Cumples con los requisitos para postularte")
 elif (not habla_ingles) and (not sabe_python):
-    print("Para postularte, necesitas saber programar en Python y tener conocimientos de inglés")
+    print(
+        "Para postularte, necesitas saber programar en Python y tener conocimientos de inglés"
+    )
 elif not habla_ingles:
     print("Para postularte, necesitas tener conocimientos de inglés")
 else:
@@ -465,16 +464,16 @@ print("\n")
 print("Ejemplo 2")
 lista = [1, 2, 3, 4, 5]
 
-for numero in lista: #Por -> variable del blueque -> in = lugar -> lista = elemento 
+for numero in lista:  #Por -> variable del blueque -> in = lugar -> lista = elemento
     print(numero)
-    print("Número: ", numero) #Imprime el numero de la lista
-    print(f"Número: {numero}") #imprime el numero y la variable
+    print("Número: ", numero)  #Imprime el numero de la lista
+    print(f"Número: {numero}")  #imprime el numero y la variable
 
 print("\n")
 
 print("Ejemplo 3")
 
-lista = ['a','b', 'c', 'd', 'e']
+lista = ['a', 'b', 'c', 'd', 'e']
 
 for letra in lista:
     numero_letra = lista.index(letra) + 1
@@ -485,9 +484,9 @@ print("Ejemplo 4")
 lista = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
 
 for nombre in lista:
-    if nombre.startswith('C'): #debe imprimir nombre que inicie con C
+    if nombre.startswith('C'):  #debe imprimir nombre que inicie con C
         print(nombre)
-    
+
 print("\n")
 
 print("Ejemplo 5")
@@ -499,8 +498,6 @@ for numero in numeros:
     print("Voy a imprimir lo que esta dentro del for: ", mi_valor)
 print(f"El valor final de mi_valor es: {mi_valor}")
 
-
-
 print("\n")
 
 palabra = 'python'
@@ -510,7 +507,7 @@ for letra in palabra:
 
 print("\n")
 
-dic ={'clave1':'1', 'clave2':'2', 'clave3':'3'}
+dic = {'clave1': '1', 'clave2': '2', 'clave3': '3'}
 
 for item in dic.items():
     print(item)
@@ -518,7 +515,6 @@ for item in dic.values():
     print(item)
 
 print("\n")
-
 
 #Práctica Loop For 1
 """Práctica Loop For 1
@@ -530,7 +526,9 @@ alumnos_clase = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Da
 """
 print("\n")
 
-alumnos_clase = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
+alumnos_clase = [
+    "María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"
+]
 
 print("\n")
 for alumno in alumnos_clase:
@@ -542,7 +540,9 @@ Dada la siguiente lista de números, realiza la suma de todos los números utili
 lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]"""
 print("\n")
 
-lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+lista_numeros = [
+    1, 5, 8, 7, 6, 8, 2, 5, 2, 6, 4, 8, 5, 9, 8, 3, 5, 4, 2, 5, 6, 4
+]
 suma_numeros = 0
 
 for numero in lista_numeros:
@@ -562,7 +562,9 @@ num % 2 == 0 (valores pares)
 
 num % 2 == 1 (valores impares)"""
 
-lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+lista_numeros = [
+    1, 5, 8, 7, 6, 8, 2, 5, 2, 6, 4, 8, 5, 9, 8, 3, 5, 4, 2, 5, 6, 4
+]
 
 suma_pares = 0
 
@@ -576,31 +578,100 @@ for numero in lista_numeros:
 print(f"La suma de los pares es: {suma_pares}")
 print(f"La suma de los impares es: {suma_impares}")
 
+print("\n\n")
+
+print("Loop While")
+""" Se cumple mientras la condicion sea verdadera
+while condicion:
+    bloque de codigo
+Ejemplo:
+cuando un jugador muere, se reinicia el jego descontando las vidas, si no hay vidas, el juego termina.
+
+mientras que = while, se cumpla una condición blooleana, se ejecuta el bloque de codigo. 
+
+palabras que pueden ir dentro de estos loops, estas son:
+break = romper el loop
+continue = continuar con la siguiente iteracion
+pass = saltar a la siguiente iteracion
+"""
+
+#Ejemolos antes de las practicas:
+#Ejemplo 1
+monedas = 5
+
+while monedas > 0:
+    print(f"Tengo {monedas} monedas")
+    monedas = monedas - 1  # o colocar monedas -=1 // es lo mismo
+else:
+    print("Ya no tengo monedas")
+
 print("\n")
+#Ejemplo 2
+
+respuesta = 's'
+while respuesta == 's':
+    respuesta = input("¿Quieres continuar? (s/n): ")
+else:
+    print("Gracias")
+
+#Ejemplo 3 Con Break
+print("\n")
+nombre = input('inserte su nombre: ')
+for letra in nombre:
+    if letra == 'r':
+        break
+    print(letra)
+
+#Ejemplo 4 Con continue
+print("\n")
+nombre = input('inserte su nombre: ')
+for letra in nombre:
+    if letra == 'i':
+        continue
+    print(letra)
 
 
+print("\n")
 #Práctica Loop While 1
-
+"""Práctica Loop While 1
+Crea un Loop While que se imprima en pantalla los números del 10 al 0, uno a la vez."""
 numero = 10
 
 while numero >= 0:
     print(numero)
     numero -= 1
 
+print("\n")
 #Práctica Loop While 2
+"""Práctica Loop While 2
+Crea un Loop While que reste de uno en uno los números desde el 50 al 0 (ambos números incluídos) con las siguientes condiciones adicionales:
 
+- Si el número es divisible por 5, mostrar dicho número en pantalla (¡recuerda que aquí puedes utilizar la operación módulo dividiendo por 5 y verificando el resto!)
+
+- Si el número no es divisible por 5, continuar ejecutando el loop sin mostrar el valor en pantalla (no te olvides de seguir restando para que el programa no corra infinitamente)."""
 numero = 50
 
 while numero >= 0:
-    if numero % 5 == 0:
+    if numero % 5 == 0: #si el numero es divisible por 5
         print(numero)
-        numero -= 1
+        numero -= 5 #resta 5 al numero
     else:
-        numero -= 1
+        numero -= 1 #resta 1 al numero 
+
+print("\n")
+
 
 #Práctica Interrupción de Flujo
+"""Práctica Interrupción de Flujo
+Crea un loop For a lo largo de la siguiente lista de números, imprimiendo en pantalla cada uno de sus elementos, e interrumpe el flujo en el momento que encuentres un valor negativo:
 
 lista_numeros = [4,5,8,7,6,9,8,2,4,5,7,1,9,5,6,-1,-5,6,-6,-4,-3]
+
+No debes cambiar el orden de la lista."""
+
+lista_numeros = [
+    4, 5, 8, 7, 6, 9, 8, 2, 4, 5, 7, 1, 9, 5, 6, -1, -5, 6, -6, -4, -3
+]
 
 for numero in lista_numeros:
     if numero >= 0:
@@ -608,40 +679,59 @@ for numero in lista_numeros:
     else:
         break
 
+print("\n")
+
+
 #Práctica Rango 1
 
-mi_lista = list(range(2500,2586))
+mi_lista = list(range(2500, 2586))
 
+
+print("\n")
 #Práctica Rango 2
 
-mi_lista = list(range(3,301,3))
+mi_lista = list(range(3, 301, 3))
 
+print("\n")
 #Práctica Rango 3
 
 suma_cuadrados = 0
 
-for i in range(1,16):
+for i in range(1, 16):
     suma_cuadrados += i**2
 
+
+print("\n")
 #Práctica Enumerador 1
 
-lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+lista_nombres = [
+    "Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío",
+    "Emiliano", "Melisa"
+]
 
-for indice,nombre in enumerate(lista_nombres):
+for indice, nombre in enumerate(lista_nombres):
     print(f'{nombre} se encuentra en el índice {indice}')
 
+
+print("\n")
 #Práctica Enumerador 2
 
 lista_indices = list(enumerate("Python"))
 
+
+print("\n")
 #Práctica Enumerador 3
 
-lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+lista_nombres = [
+    "Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío",
+    "Emiliano", "Melisa"
+]
 
 for i, nombre in enumerate(lista_nombres):
     if nombre[0] == "M":
         print(i)
 
+print("\n")
 #Práctica Zip 1
 
 capitales = ["Berlín", "Tokio", "París", "Helsinki", "Ottawa", "Canberra"]
@@ -650,6 +740,8 @@ paises = ["Alemania", "Japón", "Francia", "Finlandia", "Canadá", "Australia"]
 for pais, capital in zip(paises, capitales):
     print(f"La capital de {pais} es {capital}")
 
+
+print("\n")
 #Práctica Zip 2
 
 marcas = ["Nike", "Lenovo", "Nissan"]
@@ -657,6 +749,8 @@ productos = ["zapatillas", "notebook", "automóviles"]
 
 mi_zip = zip(marcas, productos)
 
+
+print("\n")
 #Práctica Zip 3
 
 espaniol = ["uno", "dos", "tres", "cuatro", "cinco"]
@@ -665,37 +759,64 @@ ingles = ["one", "two", "three", "four", "five"]
 
 numeros = list(zip(espaniol, portugues, ingles))
 
+
+print("\n")
 #Práctica Min y Max 1
 
-lista_numeros = [44542247/2, 21310/5, 2134747*33, 44556475, 121676, 6654067, 353254, 123134, 55**12, 611**5]
+lista_numeros = [
+    44542247 / 2, 21310 / 5, 2134747 * 33, 44556475, 121676, 6654067, 353254,
+    123134, 55**12, 611**5
+]
 
 valor_maximo = max(lista_numeros)
 
+
+print("\n")
 #Práctica Min y Max 2
 
-lista_numeros = [44542247, 21310, 2134747, 44556475, 121676, 6654067, 353254, 123134, 552512, 611665]
+lista_numeros = [
+    44542247, 21310, 2134747, 44556475, 121676, 6654067, 353254, 123134,
+    552512, 611665
+]
 
 rango = max(lista_numeros) - min(lista_numeros)
 
+
+print("\n")
 #Práctica Min y Max 3
 
-diccionario_edades = {"Carlos":55, "María":42, "Mabel":78, "José":44, "Lucas":24, "Rocío":35, "Sebastián":19, "Catalina":2,"Darío":49}
+diccionario_edades = {
+    "Carlos": 55,
+    "María": 42,
+    "Mabel": 78,
+    "José": 44,
+    "Lucas": 24,
+    "Rocío": 35,
+    "Sebastián": 19,
+    "Catalina": 2,
+    "Darío": 49
+}
 
 edad_minima = min(diccionario_edades.values())
 ultimo_nombre = max(diccionario_edades.keys())
 
+
+print("\n")
 #Práctica Random 1
 
 from random import randint
 
-aleatorio = randint(1,10)
+aleatorio = randint(1, 10)
 
+print("\n")
 #Práctica Random 2
 
 from random import *
 
 aleatorio = random()
 
+
+print("\n")
 #Práctica Random 3
 
 from random import *
@@ -704,21 +825,27 @@ nombres = ["Carlos", "Julia", "Nicole", "Laura", "Mailen"]
 
 sorteo = choice(nombres)
 
+
+print("\n")
 #Práctica Comprensión de Listas 1
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
 
 valores_cuadrado = [valor**2 for valor in valores]
 
+
+print("\n")
 #Práctica Comprensión de Listas 2
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
 
-valores_pares = [valor for valor in valores if valor%2 == 0]
+valores_pares = [valor for valor in valores if valor % 2 == 0]
 
+
+print("\n")
 #Práctica Comprensión de Listas 3
 
 temperatura_fahrenheit = [32, 212, 275]
 
-grados_celsius = [(temperatura-32)*(5/9) for temperatura in temperatura_fahrenheit]
-
+grados_celsius = [(temperatura - 32) * (5 / 9)
+                  for temperatura in temperatura_fahrenheit]
