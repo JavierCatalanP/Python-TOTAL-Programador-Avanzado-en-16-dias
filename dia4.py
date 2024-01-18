@@ -857,6 +857,15 @@ print("\n")
 #Práctica Zip 1
 """
 
+Práctica Zip 1
+Muestra en pantalla frases como la del siguiente ejemplo:
+
+La capital de Alemania es Berlín
+
+Utiliza la función zip, loops, y las siguientes listas de países y capitales para resolverlo rápida y eficientemente.
+
+capitales = ["Berlín", "Tokio", "París", "Helsinki", "Ottawa", "Canberra"]
+paises = ["Alemania", "Japón", "Francia", "Finlandia", "Canadá", "Australia"]
 """
 
 capitales = ["Berlín", "Tokio", "París", "Helsinki", "Ottawa", "Canberra"]
@@ -868,7 +877,10 @@ for pais, capital in zip(paises, capitales):
 
 print("\n")
 #Práctica Zip 2
-
+"""
+Práctica Zip 2
+Crea un objeto zip formado a partir de listas, de un conjunto de marcas y productos que tú prefieras, dentro de la variable mi_zip.
+"""
 marcas = ["Nike", "Lenovo", "Nissan"]
 productos = ["zapatillas", "notebook", "automóviles"]
 
@@ -877,6 +889,22 @@ mi_zip = zip(marcas, productos)
 
 print("\n")
 #Práctica Zip 3
+"""Práctica Zip 3
+Crea el zip con las traducciones los números del 1 al 5 en español, portugués e inglés (en el mismo orden), y convierte el objeto generado en una lista almacenada en la variable numeros:
+
+uno / um / one
+
+dos / dois / two
+
+tres / três / three
+
+cuatro / quatro / four
+
+cinco / cinco / five
+
+El resultado deberá seguir la estructura:
+
+[('uno', 'um', 'one'), ('dos', 'dois', 'two'), ... ]"""
 
 espaniol = ["uno", "dos", "tres", "cuatro", "cinco"]
 portugues = ["um", "dois", "três", "quatro", "cinco"]
@@ -884,10 +912,54 @@ ingles = ["one", "two", "three", "four", "five"]
 
 numeros = list(zip(espaniol, portugues, ingles))
 
+#min y max
+#min() = devuelve el valor más pequeño de un iterable o el valor más pequeño
+
+print("\n")
+#Forma 1
+menor = min(2,32,4,5,6,7,8,9,10)
+mayor = max(2,32,4,5,6,7,8,9,10)
+print(menor)
+print(mayor)
+
+print('\n')
+#Forma 2
+menor = (2,32,4,5,6,7,8,9,10)
+mayor = (2,32,4,5,6,7,8,9,10)
+print(min(menor))
+print(max(mayor))
+
+#forma 3
+lista = [2,32,4,5,6,7,8,9,10]
+print(f"El menor es {min(lista)} y el mayor es {max(lista)}"))
+
+#forma 4
+nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta"]
+print(min(nombres)) #devuelve el valor más pequeño de la lista = Marcos
+print(max(nombres)) #devuelve el valor más grande de la lista = Marta    
+
+#forma 5
+nombres = ["marcos", "laura", "mónica", "javier", "celina", "marta"]
+print(min(nombres)) # devulve el valor más pequeño de la lista = celina = ya que la lista está en minúsculas y el valor más pequeño es la a
+print(max(nombres)) #devuelve el valor más grande de la lista = marta = ya que la lista está en minúsculas y el valor más grande es la m.
+
+nombre = "Carlos" 
+#busca primero em mayusculas y luego en minusculas
+print(min(nombre)) #devuelve el valor más pequeño de la cadena = C
+print(max(nombre)) #devuelve el valor más grande de la cadena = s
+print(min(nombre.loewr())) #devuelve el valor más pequeño de la cadena = a
+
+dic = {'c1:45', 'c2:56', 'c3:78'}
+print(min(dic)) #devuelve el valor más pequeño de la lista = c1
+print(max(dic)) #devuelve el valor más grande de la lista = c3
+print(min(dic.values())) #devuelve el valor más pequeño de la lista = 45
 
 print("\n")
 #Práctica Min y Max 1
+"""Práctica Min y Max 1
+Obtén el valor máximo entre los valores de la siguiente lista, y almacénalo en una variable llamada valor_maximo:
 
+lista_numeros = [44542247/2, 21310/5, 2134747*33, 44556475, 121676, 6654067, 353254, 123134, 55**12, 611**5] """
 lista_numeros = [
     44542247 / 2, 21310 / 5, 2134747 * 33, 44556475, 121676, 6654067, 353254,
     123134, 55**12, 611**5
@@ -898,7 +970,12 @@ valor_maximo = max(lista_numeros)
 
 print("\n")
 #Práctica Min y Max 2
+"""
+Práctica Min y Max 2
+Calcula la diferencia entre el valor máximo y el mínimo en la siguiente lista de números, y almacénalo en una variable llamada rango:
 
+lista_numeros = [44542247, 21310, 2134747, 44556475, 121676, 6654067, 353254, 123134, 552512, 611665]
+"""
 lista_numeros = [
     44542247, 21310, 2134747, 44556475, 121676, 6654067, 353254, 123134,
     552512, 611665
@@ -909,6 +986,14 @@ rango = max(lista_numeros) - min(lista_numeros)
 
 print("\n")
 #Práctica Min y Max 3
+"""Práctica Min y Max 3
+Utilizando max(), min() y métodos de diccionarios, obtén el mínimo valor a partir del siguiente diccionario:
+
+diccionario_edades = {"Carlos":55, "María":42, "Mabel":78, "José":44, "Lucas":24, "Rocío":35, "Sebastián":19, "Catalina":2,"Darío":49}
+
+Almacena dicho valor en una variable llamada edad_minima.
+
+También, obtén el nombre que se ubica último en orden alfabético, y almacénalo en una variable llamada ultimo_nombre."""
 
 diccionario_edades = {
     "Carlos": 55,
@@ -928,13 +1013,54 @@ ultimo_nombre = max(diccionario_edades.keys())
 
 print("\n")
 #Práctica Random 1
+"""
+- Es una librería que nos permite generar números aleatorios.
+-    se impoorta con la palabra reservada import
 
-from random import randint
+"""
+
+
+from random import *
 
 aleatorio = randint(1, 10)
+print(aleatorio)
+
+aleatorio = uniform(1,5)#genera un número decimal entre 1 y 5
+print(aleatorio)#genera un número decimal entre 1 y 5
+
+aleatorio = round(uniform(1,5),1)#redondea a 1 decimal
+print(aleatorio)#1.2
+
+aleatorio = random()#genera un número aleatorio entre 0 y 1
+print(aleatorio)#0.0 y 1.0    
+
+colores = ["rojo", "verde", "azul", "amarillo", "negro", "blancco"]
+aleatorio = choice(colores) #elige un elemento de una lista
+print(choice(colores))#elige un elemento aleatorio de la lista
+
+numeros = list(range(1,110,2))#crea una lista de números del 1 al 100 de 2 en 2
+shuffer = shuffle(numeros)#mezcla la lista
+print(numeros)#mezcla la lista
+
+
+print("\n")
+
+#Practica 1
+"""
+
+Práctica Random 1
+Implementa la función randint() de la librería random que te permita obtener un número entero del 1 al 10, y almacena dicho valor en una variable llamada aleatorio
+"""
+from random import *
+aleatorio = randint(1, 10)
+print(aleatorio)
+
 
 print("\n")
 #Práctica Random 2
+"""
+Práctica Random 2
+Implementa la función random() de la librería random que te permita obtener un número decimal entre 0 y 1, y almacena dicho valor en una variable llamada aleatorio"""
 
 from random import *
 
@@ -943,7 +1069,11 @@ aleatorio = random()
 
 print("\n")
 #Práctica Random 3
+"""
+Práctica Random 3
+Utiliza el método choice() de la librería random para obtener un elemento al azar de la lista de nombres a continuación, y almacena el nombre escogido en una variable llamada sorteo.
 
+nombres = ["Carlos", "Julia", "Nicole", "Laura", "Mailen"]"""
 from random import *
 
 nombres = ["Carlos", "Julia", "Nicole", "Laura", "Mailen"]
@@ -952,7 +1082,70 @@ sorteo = choice(nombres)
 
 
 print("\n")
+
+#Comprensión de listas
+"""
+- es una forma de crear listas de manera más corta y con menos líneas de código.
+- se utiliza para crear listas de un solo tipo de dato.
+- se crea una lista con una sintaxis más corta y menos líneas de código.
+
+"""
+print("\n")
+#Sin comprensión de lista
+palabra = 'python'
+
+lista = []
+
+for letra in palabra:
+    lista.append(letra)
+
+print(lista)#['p', 'y', 't', 'h', 'o', 'n']
+print("\n")
+
+#con comprensión de lista
+
+
+palabra = 'python'
+
+lista = [letra for letra in palabra]# debe ser la misma cantidad de letras que la palabra y variable interna que se esta creando.
+
+print(lista)#['p', 'y', 't', 'h', 'o', 'n'] nos ahorramos escribir el for y el append
+print("\n")
+
+#Otra forma, con comprensión de lista
+
+lista = [letra for letra in 'python']
+print(lista)#['p', 'y', 't', 'h', 'o', 'n']
+
+print("\n")
+lista = [letra for letra in range(1,11)] #crea una lista de números del 1 al 10
+print(lista)#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+print("\n")
+
+lista = [letra for letra in range(1,11) if n * 2 > 10] #crea una lista de números del 1 al 10, imprime solo los números que son múltiplos de 2 y mayores a 10
+
+print(lista) # [2, 4, 6, 8, 10]
+
+print("\n")
+lista = [n if n * 2 > 10 else 'no' for n in range (0,21,2)]
+print (lista)# [0, 'no', 4, 'no', 6, 'no', 8, 'no', 10, 'no', 12, 'no', 14, 'no', 16, 'no', 18, 'no', 20, 'no']
+
+print("\n")
+pies = [8, 10, 12, 15, 20]
+metros= [p * 0.3281 for p in pies]
+print(metros)# [2.47, 3.04, 3.47, 4.22, 5.61]
+
+
+
+
 #Práctica Comprensión de Listas 1
+"""
+Práctica Comprensión de Listas 1
+Para realizar el ejercicio a continuación, puedes optar por diferentes caminos. Si bien en programación el camino correcto es el que devuelve el resultado correcto, te animo a que intentes aplicar los conceptos de comprensión de listas para comenzar a afianzarlos para el futuro. ¡Pueden resultarte muy útiles en tu práctica profesional!
+
+Crea una lista valores_cuadrado formada por los números de la lista valores, elevados al cuadrado.
+
+valores = [1, 2, 3, 4, 5, 6, 9.5]"""
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
 
@@ -961,6 +1154,12 @@ valores_cuadrado = [valor**2 for valor in valores]
 
 print("\n")
 #Práctica Comprensión de Listas 2
+"""Práctica Comprensión de Listas 2
+Para realizar el ejercicio a continuación, puedes optar por diferentes caminos. Si bien en programación el camino correcto es el que devuelve el resultado correcto, te animo a que intentes aplicar los conceptos de comprensión de listas para comenzar a afianzarlos para el futuro. ¡Pueden resultarte muy útiles en tu práctica profesional!
+
+Crea una lista valores_pares formada por los números de la lista valores que (¡adivinaste!) sean pares.
+
+valores = [1, 2, 3, 4, 5, 6, 9.5]"""
 
 valores = [1, 2, 3, 4, 5, 6, 9.5]
 
@@ -969,8 +1168,28 @@ valores_pares = [valor for valor in valores if valor % 2 == 0]
 
 print("\n")
 #Práctica Comprensión de Listas 3
+"""Práctica Comprensión de Listas 3
+Para realizar el ejercicio a continuación, puedes optar por diferentes caminos. Si bien en programación el camino correcto es el que devuelve el resultado correcto, te animo a que intentes aplicar los conceptos de comprensión de listas para comenzar a afianzarlos para el futuro. ¡Pueden resultarte muy útiles en tu práctica profesional!
+
+Para la siguiente lista de temperaturas en grados Fahrenheit, expresa estos mismos valores en una nueva lista de valores de temperatura en grados Celsius. La conversión entre tipo de unidades es la siguiente:
+
+°C = (°F - 32) * (5/9)
+
+o expresado de otro modo:
+
+(grados_fahrenheit-32)*(5/9)
+
+La lista de temperaturas es la siguiente:
+
+temperatura_fahrenheit = [32, 212, 275] 
+Almacena esta nueva lista en una variable llamada grados_celsius"""
+
 
 temperatura_fahrenheit = [32, 212, 275]
 
 grados_celsius = [(temperatura - 32) * (5 / 9)
                   for temperatura in temperatura_fahrenheit]
+
+
+#El operador lógico and devuelve True cuando al menos una de las condiciones que vincula es verdadera.
+#incorrecto
