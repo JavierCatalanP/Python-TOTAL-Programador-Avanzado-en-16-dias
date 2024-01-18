@@ -681,28 +681,98 @@ for numero in lista_numeros:
 
 print("\n")
 
+print("Rangos")
+"""
+- range(inicio, fin, paso)
+"""
+for numero in range(1, 10):
+    print(numero) #imrpime del 1 al 9
+    print(numero * 2) #multiplica por 2
+
+print("\n")
+
+for numero in range(5):
+    print(numero) #imrprime del 0 al 4
+
+for numero in range(1,5):
+    print(numero) #imrprime del 1 al 4
+
+for numero in range(10,100,2): #
+    print(numero) #imrprime del 10 al 100 de 2 en 2
+#---
+lista = list(range(1, 11))   # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(lista) #imrprime del 1 al 10
 
 #Práctica Rango 1
+"""Práctica Rango 1
+Crea una lista formada por todos los números desde el 2500 al 2585 (inclusive). Almacena dicha lista en la variable mi_lista."""
 
 mi_lista = list(range(2500, 2586))
 
 
 print("\n")
 #Práctica Rango 2
-
+"""Práctica Rango 2
+Utilizando la función range(), crea en una única linea de código una lista formada por todos los números múltiplos de 3 desde el 3 al 300 (inclusive). Almacena dicha lista en la variable mi_lista."""
 mi_lista = list(range(3, 301, 3))
 
 print("\n")
 #Práctica Rango 3
+"""Práctica Rango 3
+Utiliza la función range() y un loop para sumar los cuadrados de todos los números del 1 al 15 (inclusive). Almacena el resultado en una variable llamada suma_cuadrados.
 
-suma_cuadrados = 0
+Para ello:
 
-for i in range(1, 16):
-    suma_cuadrados += i**2
+Crea un rango de valores que puedas recorrer en un loop
+
+Para cada uno de estos valores, calcula su valor al cuadrado (potencia de 2). Puede que necesites crear variables intermedias (de manera opcional).
+
+Suma todos los valores al cuadrado obtenidos. Acumula la suma en la variable suma_cuadrados.""""
+suma_cuadrados = 0 #inicializo la variable
+
+for i in range(1, 16):#range(1,16)
+    suma_cuadrados += i**2#suma_cuadrados = suma_cuadrados + i**2
 
 
 print("\n")
 #Práctica Enumerador 1
+"""
+- enumerate() = devuelve un objeto enumerador que contiene los índices y valores de una secuencia.
+"""
+lista = ["a", "b", "c", "d", "e"]
+
+indice = 0
+
+for item in lista:
+    print(indice, item)
+    indice += 1 #indice = indice + 1 = 0 + 1 = 1
+#ahora con enumerate
+for item in enumerate(lista):
+    print(item) #imprime tuplas = (indice, valor)= (0, "a")
+
+#ejmplo 2
+for indice, item in enumerate(lista):
+    print(indice, item) #imprime tuplas = (indice, valor)= (0, a)
+
+#ejemplo 3
+mi_tuples = list(enumerate(lista))
+print(mi_tuples) #imprime lista de tuplas = [(0, a), (1, b), (2, c), (3, d), (4, e)]
+print(mi_tuples[1][0])#imprime el indice del valor 1 = 1 
+
+print("\n")
+#Práctica Enumerador 1
+"""Práctica Enumerador 1
+Imprime en pantalla frases como la siguiente:
+
+'{nombre} se encuentra en el índice {indice}'
+
+Donde nombre debe ser cada uno de los nombres de la lista a continuación, y el índice, obtenido mediante enumerate().
+
+lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+
+Puedes modificar la línea print() otorgada como ejemplo, pero las frases entregadas deberán ser iguales.
+
+Tip: utiliza loops!"""
 
 lista_nombres = [
     "Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío",
@@ -710,18 +780,40 @@ lista_nombres = [
 ]
 
 for indice, nombre in enumerate(lista_nombres):
-    print(f'{nombre} se encuentra en el índice {indice}')
+    print(f'{nombre} se encuentra en el índice {indice}')#i=0, nombre=Marcos
 
 
 print("\n")
 #Práctica Enumerador 2
+"""
 
-lista_indices = list(enumerate("Python"))
+Práctica Enumerador 2
+Crea una lista formada por las tuplas (indice, elemento), formadas a partir de obtener mediante enumerate() los índices de cada caracter del string "Python".
+
+Llama a la lista obtenida con el nombre de variable lista_indices .
+"""
+lista_indices=list(enumerate("Python"))
+print(lista_indice) #imprime [(0, 'P'), (1, 'y'), (2, 't'), (3, '
 
 
 print("\n")
 #Práctica Enumerador 3
+"""
+Práctica Enumerador 3
+Imprime en pantalla únicamente los índices de aquellos nombres de la lista a continuación, que empiecen con M:
 
+lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+
+Puedes resolverlo de diferentes maneras, pero servirá que tengas presente todos o algunos de los siguientes elementos:
+
+Loops
+
+Condicionales if
+
+El método enumerate()
+
+Métodos de strings o indexado
+"""
 lista_nombres = [
     "Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío",
     "Emiliano", "Melisa"
@@ -729,10 +821,43 @@ lista_nombres = [
 
 for i, nombre in enumerate(lista_nombres):
     if nombre[0] == "M":
-        print(i)
+        print(i)#imprime los indices de los nombres que empiezan con M
 
 print("\n")
 #Práctica Zip 1
+"""
+- zip() = combina dos o más secuencias (puede ser cualquier objeto iterable) y las combina en una sola secuencia de tuplas.
+- zip(secuencia1, secuencia2, ...) = combina las secuencias en una sola secuencia de tuplas.
+- zip(secuencia1, secuencia2, ...) = solo almacena los valores de la secuencia1 en la primera tupla, los valores de la secuencia o la lista mas pequeña en la segunda tupla, etc."""
+#ejemplo 1
+nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta"]
+edades = [22, 21, 20, 19, 18, 17]
+
+combinados= zip(nombres, edades)
+print(combinados) #imprime objeto zip = <zip object at 0x7f9f5d3b0d10> = [(Marcos, 22), (Laura, 21), (Mónica, 20), (Javier, 19), (Celina, 18), (Marta, 17)] 
+
+#ejemplo 2
+nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta"]
+edades = [22, 21, 20, 19, 18, 17]
+
+combinados= list(zip(nombres, edades)) #convierte a lista Castearlo
+print(combinados) #imprime lista de tuplas = [(Marcos, 22), (Laura, 21), (Mónica, 20), (Javier, 19), (Celina, 18), (Marta, 17)]
+
+#ejemplo 3
+nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta"]
+edades = [22, 21, 20, 19, 18, 17]
+ciudades = ["Linares", "Buenos Aires", "La Plata", "Córdoba", "Santa Fe", "Rosario"]
+combinados = list(zip(nombres, edades, ciudades))#convierte a lista Castearlo.
+print(combinados) #imprime lista de tuplas = [(Marcos, 22, Linares), (Laura, 21, Buenos Aires), (Mónica, 20, La Plata), (Javier, 19, Córdoba), (Celina, 18, Santa Fe), (Marta, 17, Rosario)] = deja fuerza a la lista mas pequeña. en esta caso dejó fuerza a la ciudad de Rosario. eso por no tener la misma cantidad de elementos.
+
+for nombre, edad, ciudad in combinados:
+    print(f"Nombre: {nombre}, Edad: {edad}, Ciudad: {ciudad}") #esto imprime: Nombre: Marcos, Edad: 22, Ciudad: Linares, Nombre: Laura, Edad: 21, Ciudad: Buenos Aires, Nombre: Mónica, Edad: 20, Ciudad: La Plata, Nombre: Javier, Edad: 19, Ciudad: Córdoba, Nombre: Celina, Edad, 18, Ciudad: Santa Fe, Nombre: Marta, Edad: 17, Ciudad: Rosario
+
+print("\n")
+#Práctica Zip 1
+"""
+
+"""
 
 capitales = ["Berlín", "Tokio", "París", "Helsinki", "Ottawa", "Canberra"]
 paises = ["Alemania", "Japón", "Francia", "Finlandia", "Canadá", "Australia"]
