@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://www.udemy.com/course-dashboard-redirect/?course_id=4189168" width="1000" />
+  <img src="https://cdn.statically.io/img/timelinecovers.pro/facebook-cover/download/python-programming-hello-world-facebook-cover.jpg" width="1000" />
  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0CF779&random=false&width=435&lines=Apuntes+-+Curso+Tomado+-+Enero+2024;Python+TOTAL+Programador+Avanzado+en+16-dias;1%C2%B0+Curso+2024" alt="Typing SVG" /></a>
   </div>
 
