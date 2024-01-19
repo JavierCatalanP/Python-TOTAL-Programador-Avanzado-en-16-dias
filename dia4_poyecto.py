@@ -52,3 +52,34 @@ while intentos < 8:#mientras queden intentos
     intentos += 1#aumentamos el número de intentos
 if intentos == 8:#si no hemos acertado en 8 intentos
     print(f"Lo siento, no has acertado el número secreto que era {numero_secreto}")#le decimos que no ha acertado
+
+
+
+print("\n")
+# Solución del profe
+
+from random import randint
+
+intentos = 0
+numero_secreto = randint(1,100)
+nombre = input("¿Dime tu nombre: ? ")
+
+print(f"Bueno {nombre}, he pensado un número entre 1 y 100\nTienes solo 8 intentos para adivinar")
+
+while intentos < 8:#loop while se repite tantas veces como se necesite.  ejecuta mientras queden intentos
+    estimado = int(input("¿Cuál es el número?: "))
+    intentos += 1
+
+    if estimado < numero_secreto:
+        print("Mi numero es mas alto")
+    if estimado > numero_secreto:
+        print("Mi numero es mas bajo")
+    if estimado == numero_secreto:
+        print(f"Felicitaciones {nombre} has adivinado el número secreto en {intentos} intentos")
+        break
+if estimado != numero_secreto:
+    print(f"Lo siento {nombre} no has adivinado el número secreto, era {numero_secreto}")
+
+
+
+
