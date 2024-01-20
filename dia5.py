@@ -253,8 +253,59 @@ print(invertir_palabra2(palabra))
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
+print("\nFunciones dinámicas")
+def chequear_3A_cifras(numero):
+    return numero in range(100,1000)  #Estamos haciendo una comparación booleeana
+resultado = chequear_3A_cifras(658)
+print(resultado)
+
+print("\nEjemplo:")
+
+def chequear_3_cifras(lista): #chequear una lista
+
+    lista_3_cifras = []
+    
+    for n in lista:
+        if n in range(100,1000):
+            lista_3_cifras.append(n)#Agrega a la lista
+        else:
+            pass #Si no se cumple la condición, no hacemos nada
+    return lista_3_cifras
+resultado = chequear_3_cifras([65, 159, 600])
+print(resultado)
+
+
+print("\nPráctica 1")
+"""
+Práctica Funciones Dinámicas 1
+Crea una función (todos_positivos) que reciba una lista de números como parámetro, y devuelva True si todos los valores de una lista son positivos, y False si al menos uno de los valores es negativo. Crea una lista llamada lista_numeros con valores positivos y negativos.
+
+No invoques la función, solo es necesario definirla."""
+
+def todos_positivos(lista_numeros):
+    for numero in lista_numeros:
+        if numero <= 0:
+            return False
+    return True
+
+def imprimir_numeros(lista_numeros):
+    numeros_positivos = []
+    numeros_negativos = []
+    for n in lista_numeros:
+        if n > 0:
+            numeros_positivos.append(n)
+        elif n < 0:
+            numeros_negativos.append(n)
+
+    print(f"Números positivos: {numeros_positivos}")
+    print(f"Números negativos: {numeros_negativos}")
+
+lista_numeros = [1, -2, 3, 4, 5]
+imprimir_numeros(lista_numeros)
+print(todos_positivos(lista_numeros)) # Prints: False
 
 print("\n")
+
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
 
