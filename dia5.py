@@ -1,5 +1,4 @@
 #Funciones
-
 """
 - Crear una función que reciba un número y muestre el anterior y el siguiente.
 - Crear una función que una un string y un entero.
@@ -11,10 +10,10 @@ respuesta: si, se puede crear todo lo que se pide en el ejercicio anterior con s
 #Metodos, son las funciones que se ejecutan dentro de una clase y una clase es una plantilla para crear objetos, por lo cual, un objeto es una instancia de una clase.
 
 #Ejercicio 1
-dic = {'clave 1':100, 'clave 2':200, 'clave 3':300}
+dic = {'clave 1': 100, 'clave 2': 200, 'clave 3': 300}
 
 #Aplicar un metodo a un diccionario
-a = dic.popitem()#elimina el ultimo elemento del diccionario
+a = dic.popitem()  #elimina el ultimo elemento del diccionario
 print(a)
 print(dic)
 print("\n")
@@ -42,11 +41,15 @@ Busca en la documentación acerca del funcionamiento del método solicitado para
 - El método lstrip(). significa que elimina los caracteres de la izquierda de la cadena.
 """
 print("\n")
-#Solución 
+#Solución
 
 texto = ",:_#,,,,,,:::____##Pyt%on_ _Total,,,,,,::#"
-resultado = texto.lstrip('",:_#%_')  # Utilizando el método lstrip() para eliminar los caracteres especificados, elimina los caracteres de la izquierda de la cadena.
-print(resultado)# Imprime el resultado final después de eliminar los caracteres especificados. estos serian: ",:_#%_". y quedaria: Pyt%on_ _Total,,,,,,::#
+resultado = texto.lstrip(
+    '",:_#%_'
+)  # Utilizando el método lstrip() para eliminar los caracteres especificados, elimina los caracteres de la izquierda de la cadena.
+print(
+    resultado
+)  # Imprime el resultado final después de eliminar los caracteres especificados. estos serian: ",:_#%_". y quedaria: Pyt%on_ _Total,,,,,,::#
 
 #_________________________________________________________________________________________________________________________________________________
 """Práctica Métodos y Ayuda 2
@@ -60,7 +63,7 @@ Busca en la documentación acerca del funcionamiento del método solicitado para
 
 """
 print("\n")
-frutas = ["mango", "banana", "cereza", "ciruela", "pomelo"] 
+frutas = ["mango", "banana", "cereza", "ciruela", "pomelo"]
 frutas.insert(3, "naranja")
 print(frutas)
 
@@ -74,13 +77,11 @@ marcas_smartphones = {"Samsung", "Xiaomi", "Apple", "Huawei", "LG"}
 marcas_tv = {"Sony", "Philips", "Samsung", "LG"}
 Busca en la documentación acerca del funcionamiento del método solicitado para saber cómo actúa y cómo es su funcionamiento."""
 
-
 marcas_smartphones = {"Samsung", "Xiaomi", "Apple", "Huawei", "LG"}
 
 marcas_tv = {"Sony", "Philips", "Samsung", "LG"}
 conjuntos_aislados = marcas_smartphones.isdisjoint(marcas_smartphones)
 print(conjuntos_aislados)
-
 
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
@@ -96,18 +97,21 @@ def nombre_funcion(parametro1, parametro2, parametro3):
     imprimir("codigo" + parametro1 + parametro2 + parametro3))
 """
 print("\n")
-print("Ejemplo\n")    
+print("Ejemplo\n")
 #Ejercicio 1
+
 
 def saludar_persona(nombre):
     #Esta funcion sirve para saludar a una persona
     print('Hola ' + nombre)
+
+
 saludar_persona('Javier')
 
 #_________________________________________________________________________________________________________________________________________________
 
 print("\n")
-print("Práctica 1:")  
+print("Práctica 1:")
 #Práctica 1
 """
 Práctica Crear Funciones 1
@@ -116,21 +120,28 @@ Declara una función llamada saludar, que cada vez que sea llamada imprima en pa
 Solo debes definir la función, no debes invocarla luego.
 """
 
-print("Solución:\n")  
+print("Solución:\n")
+
+
 def saludar():
     print("¡Hola mundo!")
+
+
 saludar()
 
 print("\n")
-print("Solución completa: \n")  
+print("Solución completa: \n")
+
+
 def saludar(llamada):
     print(llamada)
+
+
 saludar("¡Hola mundo!")
 
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
 print("\n Práctica 2: ")
-
 """
 Práctica Crear Funciones 2
 Declara una función llamada bienvenida, que tome como argumento el nombre de una persona, y que cada vez que sea llamada imprima en pantalla "¡Bienvenido {nombre_persona}!"
@@ -140,11 +151,14 @@ Crea la variable nombre_persona, y almacena dentro de la misma el nombre que pre
 Solo debes definir la función y crear la variable, no debes invocar la función luego.
 """
 
-print("Solución:\n")  
+print("Solución:\n")
+
+
 def bienvenida(nombre_persona):
     print(f"¡Bienvenido {nombre_persona}!")
-bienvenida("Juan Pérez")
 
+
+bienvenida("Juan Pérez")
 
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
@@ -157,46 +171,68 @@ El nombre del argumento que debe tomar dicha función es un_numero. Crea dicha v
 
 Solo debes definir la función y crear la variable, no debes invocar la función luego.
 """
-print("Solución:\n")  
+print("Solución:\n")
+
+
 def cuadrado(un_numero):
-    print(un_numero ** 2)
+    print(un_numero**2)
+
+
 cuadrado(3)
 
 print("Con impresión\n")
+
+
 def cuadrado(un_numero):
-    print(un_numero ** 2)
+    print(un_numero**2)
+
+
 cuadrado(3)
 
 print("\n")
 
-print("Solución Completa:\n")  
+print("Solución Completa:\n")
+
+
 def cuadrado_c(un_numero):
     print(f"El cuadrado de {un_numero} es {un_numero**2}")
+
+
 cuadrado_c(3)
 
 #_________________________________________________________________________________________________________________________________________________
 #Return
 print("\n")
 print("Opción 1 de Return\n")
+
+
 def multiplicar(numero1, numero2):
     return numero1 * numero2
+
+
 resultado = multiplicar(5, 10)
 print(resultado)
 
-
 print("Opción 2 de Return\n")
 
+
 def multiplicar(numero1, numero2):
-    total = numero1 * numero2 #variable local
+    total = numero1 * numero2  #variable local
     return total
+
+
 resultado = multiplicar(5, 10)
 print(resultado)
 
 print("Opción 3 de Return\n")
+
+
 def multiplicar(numero1, numero2):
-    total = numero1 * numero2 #variable local
-    print(total) #Imprime el valor de la variable local
-    return total #Guaradar el valor de la variable local
+    total = numero1 * numero2  #variable local
+    print(total)  #Imprime el valor de la variable local
+    return total  #Guaradar el valor de la variable local
+
+
 resultado = multiplicar(5, 10)
 
 #_________________________________________________________________________________________________________________________________________________
@@ -206,8 +242,12 @@ Práctica Return 1
 Crea una función llamada potencia que tome dos valores numéricos como argumentos. Deberá devolver el número que resulte de resolver una potencia, utilizando el primer número como base, y el segundo como exponente:
 3 elevado a 4 = 3 * 3 * 3 * 3 = 81
 """
+
+
 def potencia(base, exponente):
-    return base ** exponente
+    return base**exponente
+
+
 resultado = potencia(3, 4)
 print(resultado)
 print("\n")
@@ -221,8 +261,12 @@ Crea una variable llamada dolares y almacena en ella un monto cualquiera para en
 
 Pista: para realizar la conversión, la función internamente debe multiplicar este valor en dólares por 0.90 para obtener el monto equivalente en euros.
 """
+
+
 def usd_a_eur(dolares):
     return dolares * 0.90
+
+
 dolares = 100
 print(usd_a_eur(dolares))
 
@@ -238,15 +282,21 @@ También, deberás crear una variable llamada palabra, que contenga el string qu
 
 Pista: dentro de la función creada, deberás utilizar métodos de strings ya vistos."""
 
+
 def invertir_palabra(palabra):
     resultado = palabra[::-1].upper()
     print(resultado)
     return resultado
+
+
 invertir_palabra('Ptyhon')
+
 
 #Mejorada
 def invertir_palabra2(palabra):
     return palabra[::-1].upper()
+
+
 palabra = "Python"
 print(invertir_palabra2(palabra))
 
@@ -254,26 +304,33 @@ print("\n")
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
 print("\nFunciones dinámicas")
+
+
 def chequear_3A_cifras(numero):
-    return numero in range(100,1000)  #Estamos haciendo una comparación booleeana
+    return numero in range(100,
+                           1000)  #Estamos haciendo una comparación booleeana
+
+
 resultado = chequear_3A_cifras(658)
 print(resultado)
 
 print("\nEjemplo:")
 
-def chequear_3_cifras(lista): #chequear una lista
+
+def chequear_3_cifras(lista):  #chequear una lista
 
     lista_3_cifras = []
-    
+
     for n in lista:
-        if n in range(100,1000):
-            lista_3_cifras.append(n)#Agrega a la lista
+        if n in range(100, 1000):
+            lista_3_cifras.append(n)  #Agrega a la lista
         else:
-            pass #Si no se cumple la condición, no hacemos nada
+            pass  #Si no se cumple la condición, no hacemos nada
     return lista_3_cifras
+
+
 resultado = chequear_3_cifras([65, 159, 600])
 print(resultado)
-
 
 print("\nPráctica 1")
 """
@@ -282,11 +339,13 @@ Crea una función (todos_positivos) que reciba una lista de números como parám
 
 No invoques la función, solo es necesario definirla."""
 
+
 def todos_positivos(lista_numeros):
     for numero in lista_numeros:
         if numero <= 0:
             return False
     return True
+
 
 def imprimir_numeros(lista_numeros):
     numeros_positivos = []
@@ -300,26 +359,98 @@ def imprimir_numeros(lista_numeros):
     print(f"Números positivos: {numeros_positivos}")
     print(f"Números negativos: {numeros_negativos}")
 
+
 lista_numeros = [1, -2, 3, 4, 5]
 imprimir_numeros(lista_numeros)
-print(todos_positivos(lista_numeros)) # Prints: False
-
-print("\n")
-
-#_________________________________________________________________________________________________________________________________________________
-print("\n")
+print(todos_positivos(lista_numeros))  # Prints: False
 
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
-print("\n")
+print("\nPráctica 2")
+"""
+Práctica Funciones Dinámicas 2
+Crea una función (suma_menores) que sume los números de una lista (almacenada en la variable lista_numeros) siempre y cuando sean mayores a 0 y menores a 1000, y devuelva el resultado de dicha suma."""
 
+
+def suma_menores(lista_numeros):
+    suma = 0
+    for n in lista_numeros:
+        if n > 0 and n < 1000:
+            suma += n
+    return suma
+
+
+lista_numeros = [3000, 4000, 5000]
+print(suma_menores(lista_numeros))
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
+print("\nPráctica 3")
+"""
+Práctica Funciones Dinámicas 3
+Crea una función (cantidad_pares) que cuente la cantidad de números pares que existen en una lista (lista_numeros), y devuelva el resultado de dicha cuenta."""
 print("\n")
 
+
+def cantidad_pares(
+        lista_numeros):  #Función que cuenta la cantidad de números pares
+    pares = 0  #Variable local
+    for n in lista_numeros:  #ciclo for: recorre la lista: n toma los valores de la lista
+        if n % 2 == 0:  #Si el número es par, entonces:
+            pares += 1  #sume 1 a la variable pares
+    return pares  #devuelve el valor de la variable pares
+
+
+lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  #Lista de números
+print(cantidad_pares(lista_numeros))  #Imprime la cantidad de números pares
+#_________________________________________________________________________________________________________________________________________________
+print("\n Reforzamiento Funciones, desempacar taples y listas")
+
+#Datos sin funciones
+precios_de_cafe = [('capuchino', 1.5), ('e)xpresso', 2.0), ('mocaccino', 2.5)]
+
+
+#opción 1
+def cafe_mas_caro(lista_precios):  #Función que devuelve el cafe más caro
+    precio_mayor = 0  #Variable local
+    cafe_mas_caro = ''  #Variable local
+
+    for cafe, precio in lista_precios:  #ciclo for: recorre la lista: cafe toma los valores de la lista: precio toma los
+        if precio > precio_mayor:  #Si el precio es mayor al precio mayor:
+            precio_mayor = precio  #El precio mayor toma el valor del precio
+            cafe_mas_caro = cafe  #El cafe más caro toma el valor del cafe
+        else:  #Si no se cumple la condición anterior, entonces:
+            pass  #No hace nada
+
+    return (cafe_mas_caro, precio_mayor
+            )  #Devuelve el cafe más caro y el precio mayor
+
+
+print(cafe_mas_caro(
+    precios_de_cafe))  #Imprime el cafe más caro y el precio mayor
+
+
+#Opción 2
+def cafe_mas_caro(lista_precios):  #Función que devuelve el cafe más caro
+    precio_mayor = 0  #Variable local
+    cafe_mas_caro = ''  #Variable local
+
+    for cafe, precio in lista_precios:  #ciclo for: recorre la lista: cafe toma los valores de la lista: precio toma los
+        if precio > precio_mayor:  #Si el precio es mayor al precio mayor:
+            precio_mayor = precio  #El precio mayor toma el valor del precio
+            cafe_mas_caro = cafe  #El cafe más caro toma el valor del cafe
+        else:  #Si no se cumple la condición anterior, entonces:
+            pass  #No hace nada
+
+    return (cafe_mas_caro, precio_mayor
+            )  #Devuelve el cafe más caro y el precio mayor
+
+
+cafe, precio = cafe_mas_caro(precios_de_cafe)  #Desempaquetado de tuplas
+print(f'El cafe mas caro es {cafe}, cuyo precio es {precio}'
+      )  #Imprime el cafe más caro y el precio mayor
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
-print("\n")
+print("\nIteraciones entre funciones")
 
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
