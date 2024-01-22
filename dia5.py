@@ -452,11 +452,111 @@ print("\n")
 #_________________________________________________________________________________________________________________________________________________
 print("\nIteraciones entre funciones")
 
-print("\n")
-#_________________________________________________________________________________________________________________________________________________
-print("\n")
+"""Las salidas de una determinada función pueden convertirse enentradas de otras funciones. De esa manera, cada funciónrealiza una tarea definida, y el programa se construye a partirde la interacción entre funciones.
+interacción
+Python
+TOTAL
+entre funciones
+
+def funcion_1():
+...
+return
+
+
+Ejemplo: Juego elige el palito:
+eliges entre 4 palitos, si te toca el más corto piertes.
+"""
+#Guión:
+
+#Importar Librerias
+from random import shuffle    
+
+#Lista Incial que contenga los Palitos
+palitos = ['-', '---', '----', '-----']
+
+# Mezclar Palitos
+def mezclar(lista): #Función que mezcla los palitos
+    shuffle(lista) #Función que mezcla los palitos
+    return lista #Devuelve la lista
+print(mezclar(palitos)) #Imprime la lista mezclada
+
+# Pedirle Intento
+def probar_suerte():
+    intento = ''
+
+    while intento not in ['1', '2', '3', '4']: #Mientras el intento no esté en las opciónes:
+        intento = input('Elige un palito (1, 2, 3, 4): ') #Pide el intento va a ser un número
+    return int(intento) #Devuelve el intento
+intento1 = probar_suerte() #Desempaquetado de tuplas
+print(intento1) #Imprime el intento
+
+#Comprobar Intento
+def chequear_intento(lista, intento): #Función que comprueba el intento, y devuelve el palito
+    if lista[intento - 1] == '-': #Si el intento es igual a la lista:
+        print('¡A lavar los platos!') #Imprime que perdió
+    else:
+        print("Esta vez te has salvado") #Imprime que ganó
+
+    print(f"Te ha tocado {lista[intento-1]}") #Imprime el palito que tocó"
+
+palitos_mezclados = mezclar(palitos) #Desempaquetado de tuplas
+selección = probar_suerte() #Desempaquetado de tuplas
+chequear_intento(palitos_mezclados, selección) #Imprime el palito que tocó
+
 
 print("\n")
+#_________________________________________________________________________________________________________________________________________________
+print("\nPráctica 1")
+"""
+Práctica sobre Interacción entre Funciones 1
+Crea una función (lanzar_dados) que arroje dos dados al azar y devuelva sus resultados:
+
+La función debe retornar dos valores resultado, que se encuentren entre 1 y 6).
+
+Dicha función no debe requerir argumentos para funcionar, sino que debe generar internamente los valores aleatorios.
+
+Proporciona el resultado de estos dos dados a una función que se llame evaluar_jugada (es decir, esta segunda función debe recibir dos argumentos) y que retorne -sin imprimirlo- un mensaje según la suma de estos valores:
+
+Si la suma es menor o igual a 6:
+
+"La suma de tus dados es {suma_dados}. Lamentable"
+
+Si la suma es mayor a 6 y menor a 10:
+
+"La suma de tus dados es {suma_dados}. Tienes buenas chances"
+
+Si la suma es mayor o igual a 10:
+
+"La suma de tus dados es {suma_dados}. Parece una jugada ganadora"
+
+Pistas: utiliza el método choice o randint de la biblioteca random para elegir un valor al azar entre 1 y 6.
+"""
+
+
+
+
+print("Solución: \n")
+import random # Importamos a random para poder utilizar sus funciones en lanzar los dados
+
+def lanzar_dados(): # Función que lanza los dados
+    dado1 = random.randint(1, 6) #lanzamiento del primer dado
+    dado2 = random.randint(1, 6) #lanzaemiento del segundo dado
+    return dado1, dado2 # Resultados
+
+def evaluar_jugada(dado1, dado2): # Función que evalua la jugada
+    suma_dados = dado1 + dado2 # variable que almacena la suma de los dados
+    if suma_dados <= 6: #validación, si la suma de los dados es menor o igual a 6
+        return "La suma de tus dados es {}. Lamentable".format(suma_dados) #retorna el mensaje de la suma de los dados    
+    elif suma_dados > 6 and suma_dados < 10: # segunda condición, si la suma de los dados es mayor a 6 y menor a 10
+        return "La suma de tus dados es {}. Tienes buenas chances".format(suma_dados) # retorna el mensaje de la suma de los dados
+    else: # si no se cumple ninguna de las condiciones anteriores
+        return "La suma de tus dados es {}. Parece una jugada ganadora".format(suma_dados) # retorna el mensaje de la suma de los dados
+
+dados = lanzar_dados() # Desempaquetado de tuplas, iniciando la función lanzar_dados
+mensaje = evaluar_jugada(dados[0], dados[1]) # iniciando la función evaluar_jugada
+print("Dado 1: {}, Dado 2: {}".format(dados[0], dados[1])) # Imprime los dados
+print(mensaje) # Imprime el mensaje de 
+
 #_________________________________________________________________________________________________________________________________________________
 print("\n")
 
