@@ -558,11 +558,78 @@ print("Dado 1: {}, Dado 2: {}".format(dados[0], dados[1])) # Imprime los dados
 print(mensaje) # Imprime el mensaje de 
 
 #_________________________________________________________________________________________________________________________________________________
-print("\n")
+print("\nPráctica 2")
+"""
+Práctica sobre Interacción entre Funciones 2
+Crea una función llamada reducir_lista() que tome una lista como argumento (crea también la variable lista_numeros), y devuelva la misma lista, pero eliminando duplicados (dejando uno solo de los números si hay repetidos) y eliminando el valor más alto. El orden de los elementos puede modificarse.
+
+Por ejemplo, si se le proporciona la lista [1,2,15,7,2] debe devolver [1,2,7].
+
+Crea una función llamada promedio() que pueda recibir como argumento la lista devuelta por la anterior función, y que calcule el promedio de los valores de la misma. Debe devolver el resultado, sin imprimirlo.
+
+Pista: puedes utilizar la función max() para encontrar el valor más alto de una lista"""
+
+print("Solución: \n")
+
+def reducir_lista(lista): # Función que reducir la lista
+    lista_sin_duplicados = list(set(lista)) # Crea una lista sin duplicados
+    if lista_sin_duplicados: # Si la lista no está vacía
+        lista_sin_duplicados.pop(lista_sin_duplicados.index(max(lista_sin_duplicados)))# Elimina el valor más alto de la lista
+    return lista_sin_duplicados# Devuelve la lista sin duplicados
+
+def promedio(lista):# Función que calcula el promedio de la lista
+    if not lista: # Si la lista está vacía
+        return 0# Devuelve 0
+    else:# Si la lista no está vacía
+        return sum(lista) / len(lista)# Devuelve la suma de la lista dividida entre la longitud de la lista
+
+# Ejemplo de uso
+lista_numeros = [1,2,15,7,2]# Lista de números
+lista_reducida = reducir_lista(lista_numeros)# Llama a la función reducir_lista con la lista de números
+print("Lista reducida:", lista_reducida)# Imprime la lista reducida
+promedio_lista = promedio(lista_reducida)# Llama a la función promedio con la lista reducida
+print("Promedio:", promedio_lista)#
 
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
-print("\n")
+print("\nPráctica 3")
+"""
+Práctica sobre Interacción entre Funciones 3
+Crea una función (llamada lanzar_moneda) que devuelva el resultado de lanzar una moneda (al azar). Dicha función debe poder devolver los resultados "Cara" o "Cruz", y no debe recibir argumentos para funcionar.
 
-print("\n")
+Crea una segunda función (llamada probar_suerte), que tome dos argumentos: el primero, debe ser el resultado del lanzamiento de la moneda. El segundo argumento, será una lista de números cualquiera (debes crear una lista con valores y llamarla lista_numeros).
+
+Si se le proporciona una "Cara", debe mostrar el mensaje al usuario: "La lista se autodestruirá", y eliminarla (devolverla como lista vacía []).
+
+Si se le proporciona una "Cruz", debe imprimir en pantalla: "La lista fue salvada" y devolver la lista intacta.
+
+Pistas: utiliza el método choice de la biblioteca random para elegir un elemento al azar de una secuencia."""
+
+
+print("Solución: \n")
+
+import random
+
+def lanzar_moneda():
+    return random.choice(["Cara", "Cruz"])
+
+def probar_suerte(resultado, lista_numeros):
+    if resultado == "Cara":
+        print("La lista se autodestruirá")
+        return []
+    else:
+        print("La lista fue salvada")
+        return lista_numeros
+
+# Crear una lista de números
+lista_numeros = [1, 2, 3, 4, 5]
+
+# Lanzar la moneda
+resultado = lanzar_moneda()
+
+# Probar suerte
+nueva_lista = probar_suerte(resultado, lista_numeros)
+
+# Imprimir la nueva lista
+print(nueva_lista)
 #_________________________________________________________________________________________________________________________________________________
