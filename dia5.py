@@ -451,7 +451,6 @@ print(f'El cafe mas caro es {cafe}, cuyo precio es {precio}'
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
 print("\nIteraciones entre funciones")
-
 """Las salidas de una determinada función pueden convertirse enentradas de otras funciones. De esa manera, cada funciónrealiza una tarea definida, y el programa se construye a partirde la interacción entre funciones.
 interacción
 Python
@@ -469,40 +468,51 @@ eliges entre 4 palitos, si te toca el más corto piertes.
 #Guión:
 
 #Importar Librerias
-from random import shuffle    
+from random import shuffle
 
 #Lista Incial que contenga los Palitos
 palitos = ['-', '---', '----', '-----']
 
+
 # Mezclar Palitos
-def mezclar(lista): #Función que mezcla los palitos
-    shuffle(lista) #Función que mezcla los palitos
-    return lista #Devuelve la lista
-print(mezclar(palitos)) #Imprime la lista mezclada
+def mezclar(lista):  #Función que mezcla los palitos
+    shuffle(lista)  #Función que mezcla los palitos
+    return lista  #Devuelve la lista
+
+
+print(mezclar(palitos))  #Imprime la lista mezclada
+
 
 # Pedirle Intento
 def probar_suerte():
     intento = ''
 
-    while intento not in ['1', '2', '3', '4']: #Mientras el intento no esté en las opciónes:
-        intento = input('Elige un palito (1, 2, 3, 4): ') #Pide el intento va a ser un número
-    return int(intento) #Devuelve el intento
-intento1 = probar_suerte() #Desempaquetado de tuplas
-print(intento1) #Imprime el intento
+    while intento not in ['1', '2', '3',
+                          '4']:  #Mientras el intento no esté en las opciónes:
+        intento = input('Elige un palito (1, 2, 3, 4): '
+                        )  #Pide el intento va a ser un número
+    return int(intento)  #Devuelve el intento
+
+
+intento1 = probar_suerte()  #Desempaquetado de tuplas
+print(intento1)  #Imprime el intento
+
 
 #Comprobar Intento
-def chequear_intento(lista, intento): #Función que comprueba el intento, y devuelve el palito
-    if lista[intento - 1] == '-': #Si el intento es igual a la lista:
-        print('¡A lavar los platos!') #Imprime que perdió
+def chequear_intento(
+        lista,
+        intento):  #Función que comprueba el intento, y devuelve el palito
+    if lista[intento - 1] == '-':  #Si el intento es igual a la lista:
+        print('¡A lavar los platos!')  #Imprime que perdió
     else:
-        print("Esta vez te has salvado") #Imprime que ganó
+        print("Esta vez te has salvado")  #Imprime que ganó
 
-    print(f"Te ha tocado {lista[intento-1]}") #Imprime el palito que tocó"
+    print(f"Te ha tocado {lista[intento-1]}")  #Imprime el palito que tocó"
 
-palitos_mezclados = mezclar(palitos) #Desempaquetado de tuplas
-selección = probar_suerte() #Desempaquetado de tuplas
-chequear_intento(palitos_mezclados, selección) #Imprime el palito que tocó
 
+palitos_mezclados = mezclar(palitos)  #Desempaquetado de tuplas
+selección = probar_suerte()  #Desempaquetado de tuplas
+chequear_intento(palitos_mezclados, selección)  #Imprime el palito que tocó
 
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
@@ -532,30 +542,35 @@ Si la suma es mayor o igual a 10:
 Pistas: utiliza el método choice o randint de la biblioteca random para elegir un valor al azar entre 1 y 6.
 """
 
-
-
-
 print("Solución: \n")
-import random # Importamos a random para poder utilizar sus funciones en lanzar los dados
+import random  # Importamos a random para poder utilizar sus funciones en lanzar los dados
 
-def lanzar_dados(): # Función que lanza los dados
-    dado1 = random.randint(1, 6) #lanzamiento del primer dado
-    dado2 = random.randint(1, 6) #lanzaemiento del segundo dado
-    return dado1, dado2 # Resultados
 
-def evaluar_jugada(dado1, dado2): # Función que evalua la jugada
-    suma_dados = dado1 + dado2 # variable que almacena la suma de los dados
-    if suma_dados <= 6: #validación, si la suma de los dados es menor o igual a 6
-        return "La suma de tus dados es {}. Lamentable".format(suma_dados) #retorna el mensaje de la suma de los dados    
-    elif suma_dados > 6 and suma_dados < 10: # segunda condición, si la suma de los dados es mayor a 6 y menor a 10
-        return "La suma de tus dados es {}. Tienes buenas chances".format(suma_dados) # retorna el mensaje de la suma de los dados
-    else: # si no se cumple ninguna de las condiciones anteriores
-        return "La suma de tus dados es {}. Parece una jugada ganadora".format(suma_dados) # retorna el mensaje de la suma de los dados
+def lanzar_dados():  # Función que lanza los dados
+    dado1 = random.randint(1, 6)  #lanzamiento del primer dado
+    dado2 = random.randint(1, 6)  #lanzaemiento del segundo dado
+    return dado1, dado2  # Resultados
 
-dados = lanzar_dados() # Desempaquetado de tuplas, iniciando la función lanzar_dados
-mensaje = evaluar_jugada(dados[0], dados[1]) # iniciando la función evaluar_jugada
-print("Dado 1: {}, Dado 2: {}".format(dados[0], dados[1])) # Imprime los dados
-print(mensaje) # Imprime el mensaje de 
+
+def evaluar_jugada(dado1, dado2):  # Función que evalua la jugada
+    suma_dados = dado1 + dado2  # variable que almacena la suma de los dados
+    if suma_dados <= 6:  #validación, si la suma de los dados es menor o igual a 6
+        return "La suma de tus dados es {}. Lamentable".format(
+            suma_dados)  #retorna el mensaje de la suma de los dados
+    elif suma_dados > 6 and suma_dados < 10:  # segunda condición, si la suma de los dados es mayor a 6 y menor a 10
+        return "La suma de tus dados es {}. Tienes buenas chances".format(
+            suma_dados)  # retorna el mensaje de la suma de los dados
+    else:  # si no se cumple ninguna de las condiciones anteriores
+        return "La suma de tus dados es {}. Parece una jugada ganadora".format(
+            suma_dados)  # retorna el mensaje de la suma de los dados
+
+
+dados = lanzar_dados(
+)  # Desempaquetado de tuplas, iniciando la función lanzar_dados
+mensaje = evaluar_jugada(dados[0],
+                         dados[1])  # iniciando la función evaluar_jugada
+print("Dado 1: {}, Dado 2: {}".format(dados[0], dados[1]))  # Imprime los dados
+print(mensaje)  # Imprime el mensaje de
 
 #_________________________________________________________________________________________________________________________________________________
 print("\nPráctica 2")
@@ -571,24 +586,33 @@ Pista: puedes utilizar la función max() para encontrar el valor más alto de un
 
 print("Solución: \n")
 
-def reducir_lista(lista): # Función que reducir la lista
-    lista_sin_duplicados = list(set(lista)) # Crea una lista sin duplicados
-    if lista_sin_duplicados: # Si la lista no está vacía
-        lista_sin_duplicados.pop(lista_sin_duplicados.index(max(lista_sin_duplicados)))# Elimina el valor más alto de la lista
-    return lista_sin_duplicados# Devuelve la lista sin duplicados
 
-def promedio(lista):# Función que calcula el promedio de la lista
-    if not lista: # Si la lista está vacía
-        return 0# Devuelve 0
-    else:# Si la lista no está vacía
-        return sum(lista) / len(lista)# Devuelve la suma de la lista dividida entre la longitud de la lista
+def reducir_lista(lista):  # Función que reducir la lista
+    lista_sin_duplicados = list(set(lista))  # Crea una lista sin duplicados
+    if lista_sin_duplicados:  # Si la lista no está vacía
+        lista_sin_duplicados.pop(
+            lista_sin_duplicados.index(max(lista_sin_duplicados))
+        )  # Elimina el valor más alto de la lista
+    return lista_sin_duplicados  # Devuelve la lista sin duplicados
+
+
+def promedio(lista):  # Función que calcula el promedio de la lista
+    if not lista:  # Si la lista está vacía
+        return 0  # Devuelve 0
+    else:  # Si la lista no está vacía
+        return sum(lista) / len(
+            lista
+        )  # Devuelve la suma de la lista dividida entre la longitud de la lista
+
 
 # Ejemplo de uso
-lista_numeros = [1,2,15,7,2]# Lista de números
-lista_reducida = reducir_lista(lista_numeros)# Llama a la función reducir_lista con la lista de números
-print("Lista reducida:", lista_reducida)# Imprime la lista reducida
-promedio_lista = promedio(lista_reducida)# Llama a la función promedio con la lista reducida
-print("Promedio:", promedio_lista)#
+lista_numeros = [1, 2, 15, 7, 2]  # Lista de números
+lista_reducida = reducir_lista(
+    lista_numeros)  # Llama a la función reducir_lista con la lista de números
+print("Lista reducida:", lista_reducida)  # Imprime la lista reducida
+promedio_lista = promedio(
+    lista_reducida)  # Llama a la función promedio con la lista reducida
+print("Promedio:", promedio_lista)  #
 
 print("\n")
 #_________________________________________________________________________________________________________________________________________________
@@ -605,13 +629,14 @@ Si se le proporciona una "Cruz", debe imprimir en pantalla: "La lista fue salvad
 
 Pistas: utiliza el método choice de la biblioteca random para elegir un elemento al azar de una secuencia."""
 
-
 print("Solución: \n")
 
 import random
 
+
 def lanzar_moneda():
     return random.choice(["Cara", "Cruz"])
+
 
 def probar_suerte(resultado, lista_numeros):
     if resultado == "Cara":
@@ -620,6 +645,7 @@ def probar_suerte(resultado, lista_numeros):
     else:
         print("La lista fue salvada")
         return lista_numeros
+
 
 # Crear una lista de números
 lista_numeros = [1, 2, 3, 4, 5]
@@ -633,3 +659,149 @@ nueva_lista = probar_suerte(resultado, lista_numeros)
 # Imprimir la nueva lista
 print(nueva_lista)
 #_________________________________________________________________________________________________________________________________________________
+
+print("\n Argumentos indefinidos (*args)")
+"""- *args = argumentos indefinidos, es decir, que no sabemos cuántos argumentos se le pasarán a una función.
+
+- Los argumentos indefinidos se colocan como parámetros al final de la definición de la función.
+
+- Los argumentos indefinidos se indican con un asterisco (*) antes del nombre del parámetro.
+
+    - **kwargs = argumentos indefinidos que significa que no sabemos cuantos argumentos se van a pasar a la función.
+"""
+# *args
+
+
+def suma_indefinida(*args):  #convención de nombres de argumentos indefinidos
+    return sum(args)
+
+
+print(suma_indefinida(5, 6, 5))
+
+
+def suma(*codigos):  #convención de nombres de argumentos indefinidos
+    return sum(codigos)  #convención de nombres de argumentos indefinidos
+
+
+print(suma(15, 6, 15))
+
+__________________________________________________________________________________
+
+print("\nPráctica sobre Argumentos Indefinidos (*args) 1")
+
+"""Práctica sobre Argumentos Indefinidos (*args) 1
+Crea una función llamada suma_cuadrados que tome una cantidad indeterminada de argumentos numéricos, y que retorne la suma de sus valores al cuadrado.
+
+
+
+Por ejemplo para los argumentos suma_cuadrados(1,2,3) deberá retornar 14 (1+4+9)."""
+print("Solución: \n")
+def suma_cuadrados(*args):
+    suma = 0
+    for arg in args:
+        suma += arg ** 2
+    return suma
+
+print(suma_cuadrados(1, 2, 3)) # Debería retornar 14
+
+#__________________________________________________________________________________
+
+print("\nPráctica sobre Argumentos Indefinidos (*args) 2")
+
+"""
+Práctica sobre Argumentos Indefinidos (*args) 2
+Crea una función llamada suma_absolutos, que tome un conjunto de argumentos de cualquier extensión, y retorne la suma de sus valores absolutos (es decir, que tome los valores sin signo y los sume, o lo que es lo mismo, los considere a todos -negativos y positivos- como positivos).
+"""
+
+print("Solución: \n")
+def suma_absolutos(*args):
+    suma = 0
+    for arg in args:
+        suma += abs(arg)#abs es valor absoluto
+    return suma
+
+print(suma_absolutos(-1, 2, -3)) # Debería retornar 6
+
+#__________________________________________________________________________________
+
+print("\nPráctica sobre Argumentos Indefinidos (*args) 3")
+
+"""
+Práctica sobre Argumentos Indefinidos (*args) 3
+Crea una función llamada numeros_persona que reciba, como primer argumento, un nombre, y a continuación, una cantidad indefinida de números.
+
+La función debe devolver el siguiente mensaje:
+
+"{nombre}, la suma de tus números es {suma_numeros}"
+"""
+
+print("Solución: \n")
+def numeros_persona(nombre, *args):
+    suma_numeros = sum(args)
+    return f"{nombre}, la suma de tus números es {suma_numeros}"
+
+print(numeros_persona("Ana", 1, 2, 3)) # Debería retornar "Ana, la suma de tus números es 6"
+
+#__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
+      #__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
+      #__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
+
+      #__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
+
+      #__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
+
+      #__________________________________________________________________________________
+
+print("\n")
+
+"""
+
+"""
+
+print("Solución: \n")
+
