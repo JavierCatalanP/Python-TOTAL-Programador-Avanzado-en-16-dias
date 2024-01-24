@@ -685,10 +685,9 @@ def suma(*codigos):  #convención de nombres de argumentos indefinidos
 
 print(suma(15, 6, 15))
 
-__________________________________________________________________________________
+#__________________________________________________________________________________
 
 print("\nPráctica sobre Argumentos Indefinidos (*args) 1")
-
 """Práctica sobre Argumentos Indefinidos (*args) 1
 Crea una función llamada suma_cuadrados que tome una cantidad indeterminada de argumentos numéricos, y que retorne la suma de sus valores al cuadrado.
 
@@ -696,36 +695,40 @@ Crea una función llamada suma_cuadrados que tome una cantidad indeterminada de 
 
 Por ejemplo para los argumentos suma_cuadrados(1,2,3) deberá retornar 14 (1+4+9)."""
 print("Solución: \n")
+
+
 def suma_cuadrados(*args):
     suma = 0
     for arg in args:
-        suma += arg ** 2
+        suma += arg**2
     return suma
 
-print(suma_cuadrados(1, 2, 3)) # Debería retornar 14
+
+print(suma_cuadrados(1, 2, 3))  # Debería retornar 14
 
 #__________________________________________________________________________________
 
 print("\nPráctica sobre Argumentos Indefinidos (*args) 2")
-
 """
 Práctica sobre Argumentos Indefinidos (*args) 2
 Crea una función llamada suma_absolutos, que tome un conjunto de argumentos de cualquier extensión, y retorne la suma de sus valores absolutos (es decir, que tome los valores sin signo y los sume, o lo que es lo mismo, los considere a todos -negativos y positivos- como positivos).
 """
 
 print("Solución: \n")
+
+
 def suma_absolutos(*args):
     suma = 0
     for arg in args:
-        suma += abs(arg)#abs es valor absoluto
+        suma += abs(arg)  #abs es valor absoluto
     return suma
 
-print(suma_absolutos(-1, 2, -3)) # Debería retornar 6
+
+print(suma_absolutos(-1, 2, -3))  # Debería retornar 6
 
 #__________________________________________________________________________________
 
 print("\nPráctica sobre Argumentos Indefinidos (*args) 3")
-
 """
 Práctica sobre Argumentos Indefinidos (*args) 3
 Crea una función llamada numeros_persona que reciba, como primer argumento, un nombre, y a continuación, una cantidad indefinida de números.
@@ -736,72 +739,191 @@ La función debe devolver el siguiente mensaje:
 """
 
 print("Solución: \n")
+
+
 def numeros_persona(nombre, *args):
     suma_numeros = sum(args)
     return f"{nombre}, la suma de tus números es {suma_numeros}"
 
-print(numeros_persona("Ana", 1, 2, 3)) # Debería retornar "Ana, la suma de tus números es 6"
+
+print(numeros_persona(
+    "Ana", 1, 2, 3))  # Debería retornar "Ana, la suma de tus números es 6"
 
 #__________________________________________________________________________________
 
-print("\n")
+print("\nArgumentos Indefinidos (**kwargs)")
+"""
+**kwargs = 'key word args: Palabra clave argumentos indefinido' (diccionario)
+- **kwargs = argumentos indefinidos que significa que no sabemos cuantos argumentos se van a pasar a la función.
+#algún código.
 
+def suma(**kwargs):
+    #algún código
+
+suma(a=1, b=2, c=3))
+"""
+
+print("Práctica 1: \n")
+
+
+def suma(
+    **kwargs
+):  #kwargs = argumentos indefinidos que significa que no sabemos cuantos argumentos se van a pasar
+    print(type(kwargs))  #<class 'dict'>
+
+
+suma(x=1, y=2, z=3)  # Debería imprimir {'x': 1, 'y': 2, 'z': 3}
+
+print("\nPráctica 2: \n")
+
+
+def suma(
+    **kwargs
+):  #kwargs = argumentos indefinidos que significa que no sabemos cuantos argumentos se van a pasar
+
+    total = 0  #variable que almacena la suma de los valores
+    for clave, valor in kwargs.items():  #recorre el diccionario kwargs
+        print(f"{clave} = {valor}")  #imprime la clave y el valor
+        total += valor  #suma el valor a la variable total
+    return total  #retorna la suma de los valores
+
+
+print(suma(x=1, y=2,
+           z=3))  # Debería imprimr: x = 1, y = 2, z = 3, y retornar 6
+
+print("\nPráctica 3: \n")
+
+
+def prueba(num1, num2, *args, **kwargs):  #kwargs = argumentos indefinidos que significa que no sabemos cuantos argumentos se van a pasar
+
+    print(f'el primer valor es {num1}')  #imprime el primer valor
+    print(f'el segundo valor es {num2}')  #imprime el segundo valor
+
+    for arg in args:  #recorre los argumentos indefinidos
+        print(
+            f'el tercer valor args es = {arg}')  #imprime el tercer valor args
+
+    for clave, valor in kwargs.items():  #recorre el diccionario kwargs
+        print(f'{clave} = {valor}')  #imprime la clave y el valor
+
+
+args = (100, 200, 300, 400, 500)  #tupla de argumentos indefinidos
+kwargs = {'x': 'uno', 'y': 'dos', 'z': 'tres'}  #diccionario de argumentos
+
+prueba(15, 50, *args, **kwargs) # imprime todos los valores #__________________________________________________________________________________
+
+print("\nPráctica 1:")
+"""
+Práctica sobre Argumentos Indefinidos (**kwargs) 1
+Crea una función llamada cantidad_atributos que cuente la cantidad de parémetros que se entregan, y devuelva esa cantidad como resultado.
+"""
+print("Solución: \n")
+
+def cantidad_atributos(**kwargs):
+    return len(kwargs)
+print(cantidad_atributos(x=1, y=2, z=3))  #
+    
+
+#__________________________________________________________________________________
+
+print("\nPráctica 2")
+"""
+Práctica sobre Argumentos Indefinidos (**kwargs) 2
+Crea una función llamada lista_atributos que devuelva en forma de lista los valores de los atributos entregados en forma de palabras clave (keywords). La función debe preveer recibir cualquier cantidad de argumentos de este tipo.
+"""
+
+print("Solución: \n")
+
+def lista_atributos(**kwargs):
+    return list(kwargs.values())
+print(lista_atributos(x=1, y=2, z=3))  #
+
+
+#__________________________________________________________________________________
+
+print("\nPráctica 3"")
+"""
+
+Práctica sobre Argumentos Indefinidos (**kwargs) 3
+Crea una función llamada describir_persona, que tome como parámetros su nombre y luego una cantidad indetermida de argumentos. Esta función deberá mostrar en pantalla:
+
+Características de {nombre}:
+{nombre_argumento}: {valor_argumento}
+{nombre_argumento}: {valor_argumento}
+etc...
+Por ejemplo:
+
+describir_persona("María", color_ojos="azules", color_pelo="rubio")
+
+Mostrará en pantalla:
+
+Características de María:
+color_ojos: azules
+color_pelo: rubio
+"""
+
+print("Solución: \n")
+
+def describir_persona(nombre, **kwargs):
+    print(f"Características de {nombre}:")
+    for clave, valor in kwargs.items():
+        print(f"{clave}: {valor}")
+describir_persona("María", color_ojos="azules", color_pelo="rubio")
+
+def describir_persona(nombre, **kwargs):
+    print(f"Características de {nombre}:")
+    for clave, valor in kwargs.items():
+        print(f'{clave}: {valor}')
+
+#__________________________________________________________________________________
+
+print("\nProblema Práctico1")
+"""
+Crea una función llamada devolver_distintos()que reciba
+3integers como parámetros.
+
+Si la suma de los 3 numeros es mayor a 15, va a devolver elnúmero mayor.
+
+Si la suma de los 3 numeros es menor a 10, va a devolver elnúmero
+menor.
+
+Si la suma de los 3 números es un valor entre 10 y 15(incluidos) va a devolver el número de valor intermedio.
+"""
+
+print("Solución: \n")
+
+#__________________________________________________________________________________
+
+print("\nProblema Práctico2")
+"""
+Escribe una función (puedes ponerle cualquier nombre quequieras) que reciba cualquier palabra como parámetro, y quedevuelva todas sus letras únicas (sin repetir) pero en ordenalfabético.
+Por ejemplo si al invocar esta función pasamos la palabra"entretenido", debería devolver ['d', 'e', 'i', 'n', 'o', 'r', 't']"""
+
+print("Solución: \n")
+
+#__________________________________________________________________________________
+print("\nProblema Práctico3")
+"""
+Escribe una función que requiera una cantidad indefinida deargumentos. Lo que hará esta función es devolver True si enalgún momento se ha ingresado al numero cero repetido dosveces consecutivas.
+Por ejemplo:
+(5,6,1,0,0,9,3,5) >>> True
+(6,0,5,1,0,3,0,1) >>> False
+"""
+
+print("Solución: \n")
+
+#__________________________________________________________________________________
+print("\nProblema Práctico4")
+"""
+Escribe una función llamada contar_primos() que requiera un solo argumento numérico.Esta función va a mostrar en pantalla todos los números primos existentes en el rango que va desde cero hasta ese número incluido, y va a devolver la cantidad de números primos que encontró.Aclaración, por convención el 0 y el 1 no se consideran primos.
+"""
+
+print("Solución: \n")
+
+#__________________________________________________________________________________
+print("\n")
 """
 
 """
 
 print("Solución: \n")
-
-      #__________________________________________________________________________________
-
-print("\n")
-
-"""
-
-"""
-
-print("Solución: \n")
-
-      #__________________________________________________________________________________
-
-print("\n")
-
-"""
-
-"""
-
-print("Solución: \n")
-
-
-      #__________________________________________________________________________________
-
-print("\n")
-
-"""
-
-"""
-
-print("Solución: \n")
-
-
-      #__________________________________________________________________________________
-
-print("\n")
-
-"""
-
-"""
-
-print("Solución: \n")
-
-
-      #__________________________________________________________________________________
-
-print("\n")
-
-"""
-
-"""
-
-print("Solución: \n")
-
