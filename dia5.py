@@ -841,7 +841,7 @@ print(lista_atributos(x=1, y=2, z=3))  #
 
 #__________________________________________________________________________________
 
-print("\nPráctica 3"")
+print("\nPráctica 3")
 """
 
 Práctica sobre Argumentos Indefinidos (**kwargs) 3
@@ -892,6 +892,22 @@ Si la suma de los 3 números es un valor entre 10 y 15(incluidos) va a devolver 
 
 print("Solución: \n")
 
+def devolver_distintos(a,b,c):
+
+    suma = a + b + c #suma de los 3 números
+    lista = [a,b,c] #lista de los 3 números para comparar
+
+    if suma > 15:
+        return max(lista) #devuelve el número mayor
+    elif suma < 10:
+        return min(lista) #devuelve el número menor        
+    else:
+        lista.sort() # ordena la lista de menor a mayor
+        return lista[1] #devuelve el número de valor intermedio
+
+print(devolver_distintos(3,5,7)) #devuelve 7
+
+
 #__________________________________________________________________________________
 
 print("\nProblema Práctico2")
@@ -901,6 +917,18 @@ Por ejemplo si al invocar esta función pasamos la palabra"entretenido", deberí
 
 print("Solución: \n")
 
+def devolver_letras_unicas(palabra):
+    letras_unicas = set() #crea un conjunto vacío
+
+    for letra in palabra:
+        letras_unicas.add(letra) #agrega cada letra a un conjunto
+
+    mi_lista = list(letras_unicas) #convierte el conjunto en una lista
+    mi_lista.sort() #ordena la lista
+
+    return mi_lista
+
+print(devolver_letras_unicas("entretenido")) #devuelve ['d', 'e', 'i', 'n', 'o', 'r', 't']
 #__________________________________________________________________________________
 print("\nProblema Práctico3")
 """
@@ -912,6 +940,22 @@ Por ejemplo:
 
 print("Solución: \n")
 
+def ceros_vecinos(*args):
+    contador = 0
+
+    for num in args:
+        if contador + 1 == len(args):
+            return False
+        elif args[contador] == 0 and args[contador + 1] == 0:
+            return True
+        else:
+            contador += 1
+    return False
+
+print(ceros_vecinos(5,6,1,0,0,9,3,5)) #devuélve True
+
+
+
 #__________________________________________________________________________________
 print("\nProblema Práctico4")
 """
@@ -919,6 +963,29 @@ Escribe una función llamada contar_primos() que requiera un solo argumento num�
 """
 
 print("Solución: \n")
+
+def contar_primos(numero):
+    primos =[2]
+    iteracion = 3
+
+    if numero < 2:
+        return 0
+
+    while iteracion <= numero:
+        for n in range(3, iteracion, 2): #itera desde 3 hasta el número dado
+            if iteracion % n == 0:  #si el número es divisible por n
+                iteracion += 2 #se suma 2 para saltar al siguiente número impar
+                break
+        else:
+            primos.append(iteracion)
+            iteracion += 2
+    print(primos)
+    return len(primos)
+
+print(contar_primos(100)) #devuelve 25
+
+    
+
 
 #__________________________________________________________________________________
 print("\n")
