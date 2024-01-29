@@ -41,3 +41,47 @@ todas = mi_archivo.readline()
 print(todas)
 
 mi_archivo.close()# Cierra el archivo
+
+#__________________________________________________
+print("\nEjercicio 1\n")
+"""
+Práctica Abrir y Manipular Archivos 1
+Abre el archivo texto.txt e imprime su contenido.
+
+Nota: el archivo se encuentra guardado en la misma carpeta donde se aloja tu código
+"""
+print("Solución 1\n")
+
+archivo = open("texto.txt")
+print(archivo.read())
+
+#__________________________________________________
+print("\nEjercicio 2\n")
+"""
+
+Práctica Abrir y Manipular Archivos 2
+Imprime la primera línea del archivo texto.txt
+
+No olvides abrir el archivo y cerrarlo luego de ejecutar tu código.
+
+Nota: el archivo se encuentra guardado en la misma carpeta donde se aloja tu código.
+"""
+print("Solución 2\n")
+
+archivo = open("texto.txt")
+una_linea = archivo.readline()
+print(una_linea)
+
+#__________________________________________________
+print("\nEjercicio 3\n")
+"""
+Práctica Abrir y Manipular Archivos 3
+Abre el archivo texto.txt e imprime únicamente la segunda línea.
+"""
+print("Solución 3\n")
+
+archivo = open("texto.txt")
+lines = archivo.readlines()
+if len(lines) > 1:
+    print(lines[1].strip())
+print(archivo.read())
