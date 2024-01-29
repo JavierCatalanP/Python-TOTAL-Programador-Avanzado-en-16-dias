@@ -1,3 +1,6 @@
 Soy la primera linea
 ¡Vaya! ¡Yo soy la segunda!
-He quedado tercera
+He quedado terceraAgrego m�s texto
+              desde una nueva codificaci�n 
+              con privilegio
+              a 

@@ -1,0 +1,26 @@
+Reemplazo el nuevo texto
+con Hola Mundo adicionalAgrego m�s texto
+              desde una nueva codificaci�n 
+              con privilegio
+              a 
+
+Agrego 
+            m�s texto
+desde una nueva
+codificaci�n 
+con privilegio
+a
+
+Agrego 
+m�s texto
+desde una nueva
+codificaci�n 
+con privilegio
+a
+
+Agrego 
+m�s texto
+desde una nueva
+codificaci�n 
+con privilegio
+a

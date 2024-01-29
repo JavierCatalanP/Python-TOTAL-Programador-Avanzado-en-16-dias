@@ -85,3 +85,49 @@ lines = archivo.readlines()
 if len(lines) > 1:
     print(lines[1].strip())
 print(archivo.read())
+
+#__________________________________________________
+print("\nCrear y escribir archivos\n")
+"""
+solo lectura = mi_archivo = open('archivo.txt','r') viene por defecto
+Solo escritura = mi_archivo = open('archivo.txt','w')
+solo escritura al final del archivo = mi_archivo = open('archivo.txt','q')
+se crea el archivo si no existe, de existir solo deja escribir al final del archivo.
+"""
+#No permite ya que es solo modo lectura
+archivo = open('prueba.txt', 'r')
+archivo.write('soy el nuevo texto')
+archivo.close()
+#__________________________________________________
+#Permite escribir (como no existe prueba1.txt, lo crea con el contenido dentro)
+archivo = open('prueba1.txt', 'w')
+archivo.write('Reemplazo el nuevo texto\n')
+archivo.write('con Hola Mundo adicional') #Si el archivo existe, reemplaza el contenido
+archivo.close()
+#__________________________________________________
+#Agrega texto en vez de reescribir
+archivo = open('prueba1.txt', 'a')
+archivo.write("""\n\nAgrego 
+más texto
+desde una nueva
+codificación 
+con privilegio
+a""")
+archivo.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
