@@ -161,3 +161,143 @@ Pregunta 3:
 #_________________________________________________________
 #Transformar cualquier ruta a una ruta de windows
 #_________________________________________________________
+
+"""Path lo que hace es construir objetos y los dispone como rutas de accesos, ejemplo:"""
+
+from pathlib import Path
+
+guia = Path("Barcelona", "Sgrada_Familia.txt")
+print(guia) #Imprime Barcelona\Sgrada_Familia.txt
+
+#_________________________________________________________
+#Contruyendo mejor la ruta de acceso
+#_________________________________________________________
+
+"""Path lo que hace es construir objetos y los dispone como rutas de accesos, ejemplo:"""
+
+from pathlib import Path
+
+base = Path.home()
+guia = Path("Barcelona", "Sgrada_Familia.txt")
+print(base) #Imprime C:\Users\encatalan
+print(guia) #Imprime Barcelona\Sgrada_Familia.txt
+
+#_________________________________________________________
+#Concatenando las rutas de acceso
+#_________________________________________________________
+
+"""Path lo que hace es construir objetos y los dispone como rutas de accesos, ejemplo:"""
+
+from pathlib import Path
+
+base = Path.home()
+guia = Path(base, "Barcelona", "Sgrada_Familia.txt")
+print(guia) #Imprime C:\Users\encatalan\Barcelona\Sgrada_Familia.txt
+
+#_________________________________________________________
+#Otro ejemplo
+#_________________________________________________________
+"""Path lo que hace es construir objetos y los dispone como rutas de accesos, ejemplo:"""
+
+from pathlib import Path
+
+base = Path.home()
+guia = Path(base, "Europa", "España")
+guia2 = guia.with_name("Santiago")
+print(guia) #C:\Users\encatalan\Europa\Espa�a
+print(guia2) #C:\Users\encatalan\Europa\Santiago
+#_________________________________________________________
+#Acceder a un directorio con una ruta determinada
+#_________________________________________________________
+"""Path lo que hace es construir objetos y los dispone como rutas de accesos, ejemplo:"""
+
+from pathlib import Path
+base= Path.home ()
+guia = Path (base, "Europa", "España", Path("Barcelona", "Sagrada_Familia.txt"))
+print(guia) # C:\Users\encatalan\Europa\Espa�a\Barcelona\Sagrada_Familia.txt
+print(guia.parent) # C:\Users\encatalan\Europa\Espa�a\Barcelona
+print(guia.parent.parent) # C:\Users\encatalan\Europa\Espa�a
+
+#_________________________________________________________
+#Con el metodo glob / Buscando archivo Txt
+#_________________________________________________________
+
+from pathlib import Path
+guia = Path(Path.home(), "Europa")
+for txt in Path(guia). glob("*.txt"):
+    print(txt) # devuelve 1 txt encontrado  en la carpeta Europa 
+#_________________________________________________________
+    #Con el metodo glob / devuelve todos los  archivo Txt encontrados en sub carpetas
+#_________________________________________________________
+
+from pathlib import Path
+guia = Path(Path.home(), "Europa")
+
+for txt in Path(guia). glob("**/*.txt"):
+
+    print(txt) # devuelve todos los  archivo Txt encontrados en sub carpetas
+
+#_________________________________________________________
+    #Construir rutas
+#_________________________________________________________
+
+from pathlib import Path
+
+guia = Path("Europa","España","Barcelona","Sagrada_Familia.txt")
+
+en_europa = guia.relative_to(Path("Europa"))
+en_espania = guia.relative_to(Path("Europa", "España"))
+
+print(en_europa)  #Espa�a\Barcelona\Sagrada_Familia.txt    
+print(en_espania) #Barcelona\Sagrada_Familia.txt
+
+#_________________________________________________________
+    #Práctica Path 1
+#_________________________________________________________
+"""
+Almacena en la variable ruta_base, un objeto Path que señale el directorio base del usuario.
+
+Recuerda importar Path del módulo pathlib, y utilizar el método home()"""
+
+# Importamos la clase Path del módulo pathlib
+from pathlib import Path
+
+# Creamos un objeto Path que señale al directorio base del usuario
+ruta_base = Path.home()
+
+# Imprimimos la ruta del directorio base del usuario
+print(ruta_base)
+
+#_________________________________________________________
+    #Práctica Path 2
+#_________________________________________________________
+"""
+Implementa y crea una ruta relativa que nos permita llegar al archivo "practicas_path.py" a partir de la siguiente estructura de carpetas:
+- Curso Python
+    -   Día 6
+        -practicas_path.py
+
+Almacena el directorio obtenido en la variable ruta. No olvides importar Path.
+"""
+
+from pathlib import Path
+ 
+ruta = Path("Curso Python","Día 6","practicas_path.py")
+
+
+#_________________________________________________________
+    #Práctica Path 3
+#_________________________________________________________
+"""
+Práctica Path 3
+Implementa y crea una ruta absoluta que nos permita llegar al archivo "practicas_path.py" a partir de la siguiente estructura de carpetas:
+- Home(directorio base)
+    - Curso Python
+        -   Día 6
+            -practicas_path.py
+
+Almacena el directorio obtenido en la variable ruta. No olvides importar Path, y de concatenar el objeto Path que refiere a la carpeta base del usuario.
+"""
+from pathlib import Path
+ 
+ruta = Path(Path.home(), "Curso Python","Día 6","practicas_path.py")
