@@ -1,4 +1,4 @@
-.py
+
 print("Practica día 2 \n\n")
 """
 - Tipos de datos
