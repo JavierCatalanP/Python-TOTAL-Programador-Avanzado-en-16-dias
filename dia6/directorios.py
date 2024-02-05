@@ -281,7 +281,7 @@ Almacena el directorio obtenido en la variable ruta. No olvides importar Path.
 """
 
 from pathlib import Path
- 
+# Almacenamos en la variable ruta el directorio de nuestro curso python
 ruta = Path("Curso Python","Día 6","practicas_path.py")
 
 
@@ -299,23 +299,6 @@ Implementa y crea una ruta absoluta que nos permita llegar al archivo "practicas
 Almacena el directorio obtenido en la variable ruta. No olvides importar Path, y de concatenar el objeto Path que refiere a la carpeta base del usuario.
 """
 from pathlib import Path
- 
+
 ruta = Path(Path.home(), "Curso Python","Día 6","practicas_path.py")
-
-#_________________________________________________________
-    #System
-#_________________________________________________________
-
-
-# Solicitar Nombre y Edad al Usuario
-nombre = input("Ingrese su nombre: ")
-edad = input("Ingrese su edad: ")
-print(f"¡Hola, {nombre} tienes {edad} años.")
-
-# Limpiar Pantalla (Este método puede variar según el entorno de ejecución)
-# En este ejemplo, se utiliza el atajo Ctrl + L en la consola de Python.
-# Ten en cuenta que en otros entornos la forma de limpiar pantalla puede ser diferente.
-print("\033c")
-
-# Mostrar el Resultado
-print("¡Hola,", nombre + "!", "Tienes", edad, "años.")
+print(ruta)
