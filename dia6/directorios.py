@@ -310,7 +310,7 @@ ruta = Path(Path.home(), "Curso Python","Día 6","practicas_path.py")
 # Solicitar Nombre y Edad al Usuario
 nombre = input("Ingrese su nombre: ")
 edad = input("Ingrese su edad: ")
-print("¡Hola,", nombre + "!", "Tienes", edad, "años.")
+print(f"¡Hola, {nombre} tienes {edad} años.")
 
 # Limpiar Pantalla (Este método puede variar según el entorno de ejecución)
 # En este ejemplo, se utiliza el atajo Ctrl + L en la consola de Python.
