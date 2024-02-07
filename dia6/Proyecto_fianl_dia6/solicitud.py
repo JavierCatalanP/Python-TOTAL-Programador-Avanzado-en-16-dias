@@ -88,3 +88,78 @@ Opción [6] Finalizar código
 - Realiza un gráfico con el flujo del programa (diagrama de flujo)
 - Lograrlo es opcional, ¡Intentarlo no!
 """ 
+
+""" 
+[1] Leer receta
+[2] Crear receta
+[3] Crear categoría
+[4] Eliminar receta
+[5] Eliminar categoría
+[6] Finalizar programa
+
+Opción [6] Finalizar código
+
+- Todo el menu debe estar dentro de un loop while ('envolver' el código en un loop while)
+- Usar system('cls') o ('clear') para limpiar la consola
+- Buscar en la documentación más métodos  y funciones que puedes usar (son muchos).
+- Compartimenta el código en muchas funciones
+- Realiza un gráfico con el flujo del programa (diagrama de flujo)
+- Lograrlo es opcional, ¡Intentarlo no!
+
+""" 
+#1.- Menú de inicio
+
+menu = 0 
+#1 Realizar arbol de decisiones y Esqueleto del Programa
+
+if menu == 1:
+    #1.1.1.- Mostrar categorías
+
+    #1.1.2.- Elegir  una categoria
+
+    #1.1.3.- Mostrar recetas de esa categoría
+
+    #1.1.4.- Elegir recetas
+
+    #1.1.5.- Leer receta
+
+    #1.1.6.- Volver al inicio
+    pass
+elif menu== 2:
+    #1.2.1.- Mostrar categorías
+
+    #1.2.2.- Elegir  una categoria
+
+    #1.2.3.- Crear receta nueva
+
+    #1.2.4.- Volver inicio
+    pass
+elif menu == 3:
+    #1.3.1.- Crear categoria
+    #1.3.2.- Volver inicio
+    pass
+elif menu == 4:
+    #1.4.1.- Mostrar categorías
+
+    #1.4.2.- Elegir  una categoria
+
+    #1.4.3.- Mostrar recetas de esa categoría
+
+    #1.4.4.- Elegir recetas
+
+    #1.4.5.- eliminar receta
+
+    #1.4.6.- Volver al inicio
+    pass
+elif menu == 5:
+    #1.5.1.- Mostrar categorías
+
+    #1.5.2.- Elegir  una categoria
+
+    #1.5.3.- eliminar categoria
+
+    #1.5.4.- Volver al inicio
+    pass
+elif menu == 6:
+    #1.6.1.- Finalizar el Programa
+    pass
