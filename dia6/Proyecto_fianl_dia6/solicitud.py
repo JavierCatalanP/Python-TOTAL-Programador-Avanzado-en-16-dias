@@ -144,33 +144,79 @@ def inicio():
     return (eleccion_menu)
 
 
-inicio()
+#Primera Función mostrar categorias:
+def mostrar_categorias(ruta):
+    print("Categorías:")
+    ruta_categorias = Path(ruta)
+    lista_categorias = []
+    contador = 1
 
+    for carpeta in ruta_categorias.iterdir():
+        carpeta_str = str(carpeta.name)
+        print(f"[{contador}]-{carpeta_str}")
+        lista_categorias.append(carpeta_str) # lista de categorias se va a alimentar de carpeta categoria
+        contadot += 1
 
+    return lista_categorias
+
+#Segunda Función elegir categorías:
+def elegir_categoria(lista):
+    eleccion_correcta = 'x'
+
+    while not eleccion_correcta.isnumeric() or int(eleccion_correcta) not in range(1, len(lista) +1):
+        eleccion_correcta = input("\nElije una categorías: ")
+    return lista[int(eleccion_correcta)-1]
+
+#Tercera Función mostrar recetas:
+def mostrar_recetas(ruta):
+    print("Recetas:\n")
+    ruta_recetas = Path(ruta)
+    lista_recetas = []
+    contador = 1
+
+    for receta in ruta_recetas.glob('*.txt'):
+        receta_str = str(receta.name)
+        print(f"[{contador}]- {receta_str}")
+        lista_recetas.append(receta)
+        contador += 1
+        return lista_recetas
+
+#Cuarta Función elegir recetas
+def elegir_recetas(lista):
+    eleccion_receta = 'x'
+
+    while not eleccion_receta.isnumeric() or  int(eleccion_receta) not in range(1, len(lista) + 1):
+        eleccion_receta = input('\nElige una receta')
+    return lista[int(eleccion_receta)-1]
 
 
 #1.- Menú de inicio
-
 menu = 0 
 #1 Realizar arbol de decisiones y Esqueleto del Programa
 
 if menu == 1:
     #1.1.1.- Mostrar categorías
+    mis_categorias =  mostrar_categorias(mi_ruta)
 
     #1.1.2.- Elegir  una categoria
+    mi_categoria = elegir_categoria(mis_categorias)
 
     #1.1.3.- Mostrar recetas de esa categoría
+    mis_recetas = mostrar_recetas(mi_categoria)
 
     #1.1.4.- Elegir recetas
+    mi_receta = elegir_recetas(mis_recetas)
 
     #1.1.5.- Leer receta
 
     #1.1.6.- Volver al inicio
     pass
 elif menu== 2:
-    #1.2.1.- Mostrar categorías
+      #1.1.1.- Mostrar categorías
+    mis_categorias =  mostrar_categorias(mi_ruta)
 
-    #1.2.2.- Elegir  una categoria
+    #1.1.2.- Elegir  una categoria
+    mi_categoria = elegir_categoria(mis_categorias)    
 
     #1.2.3.- Crear receta nueva
 
@@ -181,22 +227,28 @@ elif menu == 3:
     #1.3.2.- Volver inicio
     pass
 elif menu == 4:
-    #1.4.1.- Mostrar categorías
+      #1.1.1.- Mostrar categorías
+    mis_categorias =  mostrar_categorias(mi_ruta)
 
-    #1.4.2.- Elegir  una categoria
+    #1.1.2.- Elegir  una categoria
+    mi_categoria = elegir_categoria(mis_categorias)
 
     #1.4.3.- Mostrar recetas de esa categoría
+    mis_recetas = mostrar_recetas(mi_categoria)
 
     #1.4.4.- Elegir recetas
+    mi_receta = elegir_recetas(mis_recetas)
 
     #1.4.5.- eliminar receta
 
     #1.4.6.- Volver al inicio
     pass
 elif menu == 5:
-    #1.5.1.- Mostrar categorías
+      #1.1.1.- Mostrar categorías
+    mis_categorias =  mostrar_categorias(mi_ruta)
 
-    #1.5.2.- Elegir  una categoria
+    #1.1.2.- Elegir  una categoria
+    mi_categoria = elegir_categoria(mis_categorias)
 
     #1.5.3.- eliminar categoria
 
