@@ -141,7 +141,7 @@ def inicio():
 [5] - Eliminar categoría
 [6] - Salir del programa""")
         eleccion_menu = input()
-    return (eleccion_menu)
+    return int(eleccion_menu)
 
 
 #Primera Función mostrar categorias:
@@ -297,7 +297,7 @@ while not finalizar_programa:
         #1.1.2.- Elegir  una categoria
         mi_categoria = elegir_categoria(mis_categorias)
 
-        #1.4.3.- Mostrar recetas de esa categoría
+        #1.4.3.- Mo4strar recetas de esa categoría
         mis_recetas = mostrar_recetas(mi_categoria)
 
         #1.4.4.- Elegir recetas
@@ -324,4 +324,4 @@ while not finalizar_programa:
         pass
     elif menu == 6:
     #1.6.1.- Finalizar el Programa
-    finalizar_programa = True
+        finalizar_programa = True
