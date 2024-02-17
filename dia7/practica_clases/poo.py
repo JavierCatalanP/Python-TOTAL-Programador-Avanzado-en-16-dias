@@ -44,5 +44,5 @@ Acoplamiento: Indica el grado de interdependencia entre las clases, donde se bus
 -> Programar eventos -> Funciones -> Nace POO
 Permite agrupar  una serie de operaciones y datos en un solo lugar para poder manipularlos juntos.
 """
-#libro de Python
+#libro de Python 1
 #https://ellibrodepython.com/programacion-orientada-a-objetos-python
