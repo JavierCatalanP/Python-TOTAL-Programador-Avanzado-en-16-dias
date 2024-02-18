@@ -80,7 +80,6 @@ Decoradores:
     def mi_metodo(self):
         print('algo')
     mi_metodo()    
-    
 - Métodos de clase @classmethod = En segundo lugar, tenemos los métodos de clase.
 Estos se definen colocando antes, como dijimos arriba, class methods y en sus parámetros, en vez de poner self, ponemos CLS por clase.
 
@@ -109,3 +108,89 @@ En otras palabras, los métodos estáticos se podrían ver como funciones normal
         print('algo')
 
 """
+
+class Pajaro:
+    
+    alas = True
+    
+    def __init__(self, color, especie):
+        self.color = color
+        self.especie = especie
+        
+    def piar(self):
+        print('pio')
+    
+    def volar(self, metros):
+        print(f"El pajaro ha volado {metros} metros")
+        self.piar() #2.- Acceder a otros métodos
+    
+    def pintar_negro(self):
+        self.color = 'negro'
+        print(f"El color de mi pajaro es {self.color}") #1.- Acceder y modifican atributos del objeto
+        
+    @classmethod #método de clase
+    def poner_huevos(cls, cantidad):
+        print(f"Puso {cantidad} huevos")
+        cls.alas = False #Modificar el estado de la clase.
+        print(cls.alas) #3.- Modificar el estado de la clase.
+
+    @staticmethod
+    def mirar():
+        print("El pajaro esta mirando")
+
+piolin = Pajaro('amarillo', 'canario')
+
+piolin.pintar_negro() #1.- Acceder y modifican atributos del objeto
+piolin.volar(50) #2.- Acceder a otros métodos
+
+piolin.alas = False #Modificar el estado de la clase.
+print(piolin.alas) #3.- Modificar el estado de la clase.
+
+Pajaro.poner_huevos(10) #4.- Métodos de clase
+
+Pajaro.mirar() #5.- Método estático, no puede acceder a otros métodos y no puede modificar.
+
+
+print("\n----------------------------------------------------------------")
+print('Práctica Tipos de Métodos 1')
+print("----------------------------------------------------------------\n")
+
+"""Crea un método estático respirar() para la clase Mascota. Cuando se llame, debe imprimir en pantalla "Inhalar... Exhalar"""
+
+class Mascota:
+    @staticmethod
+    def respirar():
+        print("Inhalar... Exhalar")
+
+print("\n----------------------------------------------------------------")
+print('Práctica Tipos de Métodos 2')
+print("----------------------------------------------------------------\n")
+
+"""Práctica Tipos de Métodos 2
+Crea un método de clase revivir() que actúa sobre el atributo de clase vivo de la clase Jugador, estableciéndolo en True cada vez que es invocado. El valor predeterminado del atributo vivo, debe ser False."""
+
+class Jugador:
+    vivo = False #Valor predeterminado del atributo vivo
+    
+    @classmethod
+    def revivir(cls):
+        cls.vivo = True #Modificar el estado de la clase.
+        print(cls.vivo) #3.- Modificar el estado de la clase.
+
+print("\n----------------------------------------------------------------")
+print('Práctica Tipos de Métodos 3')
+print("----------------------------------------------------------------\n")
+
+"""Práctica Tipos de Métodos 3
+Crea un método de instancia lanzar_flecha() que reste en -1 la cantidad de flechas que tiene una instancia de Personaje, que cuenta con un atributo de instancia de tipo número, llamado cantidad_flechas.
+"""
+
+class Personaje:
+    
+    def __init__(self, cantidad_fechas):
+        self.cantidad_flechas = cantidad_fechas
+    
+    def lanzar_flecha(self):
+        self.cantidad_flechas -=1
+        print(self.cantidad_flechas)
+
