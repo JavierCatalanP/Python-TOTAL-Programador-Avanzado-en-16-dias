@@ -2,7 +2,7 @@
 from os import Path
 
 # Ruta del archivo
-ruta = "C:\\Users\\encatalan\\Downloads\\p1.txt"
+ruta = "F:\\SAC\\JAVIER CATALAN\\02.- Costos\\Pagos\\Doc_pendientes"
 
 # Verificamos si el archivo existe
 if path.exists(ruta):
