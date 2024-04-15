@@ -1,4 +1,4 @@
-import os
+"""import os
 
 # Especifica la ruta del directorio que deseas listar.
 ruta = 'F:/SAC/JAVIER CATALAN/02.- Costos/Pagos/Doc_pendientes'
@@ -24,4 +24,13 @@ directorios = list(filter(os.path.isdir, os.listdir(ruta)))
 
 # Imprime los directorios.
 for directorio in directorios:
-    print(directorio)
+    print(directorio)"""
+x = 2
+y = 2
+res =x+y
+y = 6
+res = x+y
+    
+print(res)
+
+#Crear calculadora 

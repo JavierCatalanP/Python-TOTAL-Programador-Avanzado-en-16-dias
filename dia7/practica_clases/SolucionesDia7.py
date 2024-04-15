@@ -236,7 +236,8 @@ personajes = [hawkeye, gandalf, jack]
  
 for personaje in personajes:
     personaje.atacar()
-Práctica Polimorfismo 3
+
+#Práctica Polimorfismo 3
 
 class Mago():
     def defender(self):
@@ -252,7 +253,8 @@ class Samurai():
  
 def personaje_defender(personaje):
     personaje.defender()
-Práctica Métodos Especiales 1
+
+#Práctica Métodos Especiales 1
 
 class Libro():
     def __init__(self, titulo, autor, cantidad_paginas):
@@ -262,7 +264,8 @@ class Libro():
  
     def __str__(self):
         return f'"{self.titulo}", de {self.autor}'
-Práctica Métodos Especiales 2
+
+#Práctica Métodos Especiales 2
 
 class Libro():
     def __init__(self, titulo, autor, cantidad_paginas):
@@ -272,7 +275,8 @@ class Libro():
  
     def __len__(self):
         return self.cantidad_paginas
-Práctica Métodos Especiales 3
+
+#Práctica Métodos Especiales 3
 
 class Libro():
     def __init__(self, titulo, autor, cantidad_paginas):
